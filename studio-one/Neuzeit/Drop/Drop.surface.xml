@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Neuzeit Instruments "Drop" - launcher (scenes) + mixer + assignable encoder-push buttons. -->
+<!-- Neuzeit Instruments "Drop" - launcher + faders/mutes mixer + 32 assignable knobs + pushes. -->
 <ControlSurface>
 	<Controls>
 		<!-- 4x4 clip/scene grid (ch16 notes), pad[0]=bottom-left -->
@@ -73,7 +73,7 @@
 		<Control name="navDown" type="button" options="receive"><MidiMessage status="#9F" address="86"/></Control>
 		<Control name="navRight" type="button" options="receive"><MidiMessage status="#9F" address="87"/></Control>
 		<Control name="stopAll" type="button" options="receive"><MidiMessage status="#9F" address="127"/></Control>
-		<!-- Mixer: faders ch1 CC44-51 -->
+		<!-- Faders ch1 CC44-51 -> volume -->
 		<Control name="fader[0]" title="Fader 1" type="fader" options="receive public"><MidiMessage status="#B0" channel="#00" address="#2C"/></Control>
 		<Control name="fader[1]" title="Fader 2" type="fader" options="receive public"><MidiMessage status="#B0" channel="#00" address="#2D"/></Control>
 		<Control name="fader[2]" title="Fader 3" type="fader" options="receive public"><MidiMessage status="#B0" channel="#00" address="#2E"/></Control>
@@ -82,31 +82,39 @@
 		<Control name="fader[5]" title="Fader 6" type="fader" options="receive public"><MidiMessage status="#B0" channel="#00" address="#31"/></Control>
 		<Control name="fader[6]" title="Fader 7" type="fader" options="receive public"><MidiMessage status="#B0" channel="#00" address="#32"/></Control>
 		<Control name="fader[7]" title="Fader 8" type="fader" options="receive public"><MidiMessage status="#B0" channel="#00" address="#33"/></Control>
-		<!-- Sends: encoder rows 2-4 (ch1). Row 1 (pan) left unmapped. -->
-		<Control name="send[0][0]" title="Snd1 1" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#0A"/></Control>
-		<Control name="send[0][1]" title="Snd1 2" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#0B"/></Control>
-		<Control name="send[0][2]" title="Snd1 3" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#0C"/></Control>
-		<Control name="send[0][3]" title="Snd1 4" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#0D"/></Control>
-		<Control name="send[0][4]" title="Snd1 5" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#0E"/></Control>
-		<Control name="send[0][5]" title="Snd1 6" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#0F"/></Control>
-		<Control name="send[0][6]" title="Snd1 7" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#10"/></Control>
-		<Control name="send[0][7]" title="Snd1 8" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#11"/></Control>
-		<Control name="send[1][0]" title="Snd2 1" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#12"/></Control>
-		<Control name="send[1][1]" title="Snd2 2" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#13"/></Control>
-		<Control name="send[1][2]" title="Snd2 3" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#14"/></Control>
-		<Control name="send[1][3]" title="Snd2 4" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#15"/></Control>
-		<Control name="send[1][4]" title="Snd2 5" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#16"/></Control>
-		<Control name="send[1][5]" title="Snd2 6" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#17"/></Control>
-		<Control name="send[1][6]" title="Snd2 7" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#18"/></Control>
-		<Control name="send[1][7]" title="Snd2 8" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#19"/></Control>
-		<Control name="send[2][0]" title="Snd3 1" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#1A"/></Control>
-		<Control name="send[2][1]" title="Snd3 2" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#1B"/></Control>
-		<Control name="send[2][2]" title="Snd3 3" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#1C"/></Control>
-		<Control name="send[2][3]" title="Snd3 4" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#1D"/></Control>
-		<Control name="send[2][4]" title="Snd3 5" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#1E"/></Control>
-		<Control name="send[2][5]" title="Snd3 6" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#1F"/></Control>
-		<Control name="send[2][6]" title="Snd3 7" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#21"/></Control>
-		<Control name="send[2][7]" title="Snd3 8" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#22"/></Control>
+		<!-- All 32 encoders (rows 1-4): public + unmapped -> assign to plugins via Control Link -->
+		<Control name="knob[0]" title="Knob 1" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#01"/></Control>
+		<Control name="knob[1]" title="Knob 2" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#02"/></Control>
+		<Control name="knob[2]" title="Knob 3" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#03"/></Control>
+		<Control name="knob[3]" title="Knob 4" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#04"/></Control>
+		<Control name="knob[4]" title="Knob 5" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#05"/></Control>
+		<Control name="knob[5]" title="Knob 6" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#07"/></Control>
+		<Control name="knob[6]" title="Knob 7" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#08"/></Control>
+		<Control name="knob[7]" title="Knob 8" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#09"/></Control>
+		<Control name="knob[8]" title="Knob 9" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#0A"/></Control>
+		<Control name="knob[9]" title="Knob 10" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#0B"/></Control>
+		<Control name="knob[10]" title="Knob 11" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#0C"/></Control>
+		<Control name="knob[11]" title="Knob 12" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#0D"/></Control>
+		<Control name="knob[12]" title="Knob 13" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#0E"/></Control>
+		<Control name="knob[13]" title="Knob 14" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#0F"/></Control>
+		<Control name="knob[14]" title="Knob 15" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#10"/></Control>
+		<Control name="knob[15]" title="Knob 16" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#11"/></Control>
+		<Control name="knob[16]" title="Knob 17" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#12"/></Control>
+		<Control name="knob[17]" title="Knob 18" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#13"/></Control>
+		<Control name="knob[18]" title="Knob 19" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#14"/></Control>
+		<Control name="knob[19]" title="Knob 20" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#15"/></Control>
+		<Control name="knob[20]" title="Knob 21" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#16"/></Control>
+		<Control name="knob[21]" title="Knob 22" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#17"/></Control>
+		<Control name="knob[22]" title="Knob 23" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#18"/></Control>
+		<Control name="knob[23]" title="Knob 24" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#19"/></Control>
+		<Control name="knob[24]" title="Knob 25" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#1A"/></Control>
+		<Control name="knob[25]" title="Knob 26" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#1B"/></Control>
+		<Control name="knob[26]" title="Knob 27" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#1C"/></Control>
+		<Control name="knob[27]" title="Knob 28" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#1D"/></Control>
+		<Control name="knob[28]" title="Knob 29" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#1E"/></Control>
+		<Control name="knob[29]" title="Knob 30" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#1F"/></Control>
+		<Control name="knob[30]" title="Knob 31" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#21"/></Control>
+		<Control name="knob[31]" title="Knob 32" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#22"/></Control>
 		<!-- mute buttons ch2 -->
 		<Control name="mute[0]" title="Mute 1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#23"/></Control>
 		<Control name="mute[1]" title="Mute 2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#24"/></Control>
@@ -116,7 +124,7 @@
 		<Control name="mute[5]" title="Mute 6" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#29"/></Control>
 		<Control name="mute[6]" title="Mute 7" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#2A"/></Control>
 		<Control name="mute[7]" title="Mute 8" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#2B"/></Control>
-		<!-- Encoder-push buttons (momentary), ch1 notes = each encoder CC. Assign via Control Link. -->
+		<!-- Encoder-push buttons (momentary), ch1 notes = encoder CC. Assign via Control Link. -->
 		<Control name="push[0][0]" title="Push 1-1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#01"/></Control>
 		<Control name="push[0][1]" title="Push 1-2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#0A"/></Control>
 		<Control name="push[0][2]" title="Push 1-3" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#12"/></Control>
@@ -172,15 +180,11 @@
 			<Command control="stopAll" command.category="Launcher" command.name="Stop All"/>
 		</Global>
 
+		<!-- Mixer: faders->volume, mutes->mute. Encoders (knob[]) are NOT mapped here so they stay free for Control Link. -->
 		<DeviceMapping device="MixerConsole" name="MixerMapping">
 			<PlacementBank target="RemoteBank" pagesize="8" name="ChannelBankElement">
 				<foreach variable="$ch" count="8">
 					<Strip>
-						<Bank target="Sends" name="SendsBankElement">
-							<foreach variable="$s" count="3">
-								<Strip><Value control="send[$s][$ch]" param="sendlevel"/></Strip>
-							</foreach>
-						</Bank>
 						<Value control="fader[$ch]" param="volume"/>
 						<Toggle control="mute[$ch]" param="mute" options="momentary"/>
 					</Strip>
