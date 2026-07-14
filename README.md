@@ -100,7 +100,7 @@ The 32 pushes are `public` controls. Map each one with **Control Link**: focus t
 - **Mute message type:** mutes are wired as **notes** on ch2. If they don't toggle, your unit may send them as CC — change `status="#90"` to `status="#B0"` on the `mute[...]` controls in `Drop.surface.xml`.
 - **Don't edit the device in Studio One's built-in device *editor*** — it rewrites the file and strips hand-authored controls. Assign ports in External Devices only.
 - **Pad colours** use an approximate 14-colour palette in `DropProtocol.js` (`kDropColors`) — tune to taste.
-- **Image:** the real product photo is omitted for copyright reasons; a placeholder SVG ships instead. Drop in your own `Drop.png` and change `imageFile` if you like.
+- **Image:** ships an AI-generated device render (`Drop.png`, no watermark). Swap in your own image and update `imageFile` in `Drop.device` if you prefer.
 
 ## License
 

@@ -17,7 +17,7 @@
 	scriptFile="DropComponent.js"
 	scriptFile.functionName="createDropComponentInstance"
 
-	imageFile="Drop.svg"
+	imageFile="Drop.png"
 	textFile="Drop.txt"
 
 	sendMidiClock="1"
