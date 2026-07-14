@@ -39,7 +39,7 @@ This is a Drop DAW config with two changes vs. a default export, so the Drop sen
 |--------|----------------|--------|
 | **Faders A-1…A-8** | CC 44–51, ch 1 | `maxOut` capped at **96** |
 | **Encoders A (32)** | CC, ch 1 (pan row + 3 send rows) | unchanged |
-| **Encoder pushes (32)** | **Notes 1–34, ch 1** (skipping 6 & 32) | switched from internal behaviour to **momentary MIDI notes** |
+| **Encoder pushes (32)** | **Notes 1–34, ch 2** (skipping 6 & 32) | switched from internal behaviour to **momentary MIDI notes** |
 | **Mute buttons A-1…A-8** | ch 2 | unchanged |
 
 Notes:
@@ -53,13 +53,16 @@ Notes:
 
 | Drop control | MIDI | Studio One target |
 |---|---|---|
-| 4×4 grid | ch16 notes 88–103 | Launcher **scene launch** (`kScenesOnly`) |
-| Session ◀ ▲ ▼ ▶ | ch16 notes 84–87 | move the Launcher focus box |
+| 4×4 grid (top-left first) | ch16 notes 88–103 | Launcher **scene launch** (`kScenesOnly`) |
+| Session ◀ ▲ ▼ ▶ | ch16 notes 84–87 | move the focus box by **1** |
+| Bottom pad row ◀ ▲ ▼ ▶ | ch16 notes 104–107 | **page** the focus box by **4** |
 | Stop-All | ch16 note 127 | Launcher *Stop All* |
-| Faders ×8 | ch1 CC 44–51 | channel **volume** |
-| Encoders rows 2–4 | ch1 CC | **sends 1–3** per channel |
-| Mutes ×8 | ch2 | channel **mute** |
-| Encoder pushes ×32 | ch1 notes 1–34 | **assignable** (Control Link) |
+| Faders (8 layers A–H) | ch 1/3/5/7 CC | channel **volume**, mixer **ch 1–64** (Layer A→1–8 … H→57–64) |
+| Mutes (8 layers A–H) | ch 2/4/6/8 | channel **mute**, ch 1–64 |
+| Encoders ×32 | ch1 CC 1–34 | free **`Knob 1–32`** — assign to plugins via Control Link |
+| Encoder pushes ×32 | **ch2** notes 1–34 | free momentary **buttons** — assign via Control Link |
+
+The 8 Drop **layers** expand the mixer: each layer sends different CCs on the same 8 physical faders/mutes, so A–H address channels 1–64. No layer-switch handling is needed — every layer's CCs are pre-mapped.
 
 The grid LEDs echo Studio One clip state: velocity = `colorIndex + 2`, `+16` queued, `+64` playing, `1` = empty.
 

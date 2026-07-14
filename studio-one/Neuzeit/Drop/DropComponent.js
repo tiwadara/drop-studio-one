@@ -93,6 +93,24 @@ class DropComponent extends PreSonus.ControlSurfaceComponent {
         if (!state || !this.launcherHandler) return;
         this.launcherHandler.setColumnOffset(this.launcherHandler.getColumnOffset() + 1);
     }
+
+    // --- Launcher PAGE navigation (bottom pad row) - jump by a full grid (4) ----------------
+    onLauncherPageUp(state) {
+        if (!state || !this.launcherHandler) return;
+        this.launcherHandler.setRowOffset(this.launcherHandler.getRowOffset() - 4);
+    }
+    onLauncherPageDown(state) {
+        if (!state || !this.launcherHandler) return;
+        this.launcherHandler.setRowOffset(this.launcherHandler.getRowOffset() + 4);
+    }
+    onLauncherPageLeft(state) {
+        if (!state || !this.launcherHandler) return;
+        this.launcherHandler.setColumnOffset(this.launcherHandler.getColumnOffset() - 4);
+    }
+    onLauncherPageRight(state) {
+        if (!state || !this.launcherHandler) return;
+        this.launcherHandler.setColumnOffset(this.launcherHandler.getColumnOffset() + 4);
+    }
 }
 
 function createDropComponentInstance() {
