@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 260" width="320" height="260">
+  <rect x="4" y="4" width="312" height="252" rx="14" fill="#1b1c1f" stroke="#3a3c42" stroke-width="2"/>
+  <text x="24" y="40" font-family="Helvetica,Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="3" fill="#e8e8ea">DROP</text>
+  <text x="24" y="58" font-family="Helvetica,Arial,sans-serif" font-size="8" letter-spacing="2" fill="#7d7f86">STUDIO ONE INTEGRATION</text>
+  <g fill="#2f3a5a" stroke="#4a4d55">
+    <rect x="24" y="80" width="40" height="34" rx="5"/><rect x="70" y="80" width="40" height="34" rx="5"/><rect x="116" y="80" width="40" height="34" rx="5"/><rect x="162" y="80" width="40" height="34" rx="5"/>
+    <rect x="24" y="120" width="40" height="34" rx="5"/><rect x="70" y="120" width="40" height="34" rx="5"/><rect x="116" y="120" width="40" height="34" rx="5"/><rect x="162" y="120" width="40" height="34" rx="5"/>
+    <rect x="24" y="160" width="40" height="34" rx="5"/><rect x="70" y="160" width="40" height="34" rx="5"/><rect x="116" y="160" width="40" height="34" rx="5"/><rect x="162" y="160" width="40" height="34" rx="5"/>
+    <rect x="24" y="200" width="40" height="34" rx="5"/><rect x="70" y="200" width="40" height="34" rx="5"/><rect x="116" y="200" width="40" height="34" rx="5"/><rect x="162" y="200" width="40" height="34" rx="5"/>
+  </g>
+  <g fill="#3a3c42"><rect x="224" y="80" width="10" height="154" rx="4"/><rect x="248" y="80" width="10" height="154" rx="4"/><rect x="272" y="80" width="10" height="154" rx="4"/><rect x="296" y="80" width="6" height="154" rx="3"/></g>
+</svg>

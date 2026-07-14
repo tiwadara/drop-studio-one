@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ******************************************************************************************** -->
+<!-- Neuzeit Instruments "Drop" - Studio One device definition                                    -->
+<!-- ******************************************************************************************** -->
+<DeviceDefinition
+	vendor="Neuzeit Instruments"
+	name="Drop"
+
+	classID="{78589551-3928-1047-832D-DD59579F8EBA}"
+	category="Surface"
+	nativeCode="JSControlSurfaceDevice"
+
+	classFile="DropMidiDevice.js"
+	classFile.functionName="createDropDeviceInstance"
+
+	surfaceFile="Drop.surface.xml"
+	scriptFile="DropComponent.js"
+	scriptFile.functionName="createDropComponentInstance"
+
+	imageFile="Drop.svg"
+	textFile="Drop.txt"
+
+	sendMidiClock="1"
+	feedbackSupported="1"
+/>

@@ -1,0 +1,2 @@
+Neuzeit Instruments Drop - Studio One Launcher control.
+4x4 pad grid launches and shows clip state in the Launcher; session arrows scroll the grid; transport and Stop All on the side buttons.

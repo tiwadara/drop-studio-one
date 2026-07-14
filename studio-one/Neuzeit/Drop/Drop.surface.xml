@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Neuzeit Instruments "Drop" - launcher (scenes) + mixer + assignable encoder-push buttons. -->
+<ControlSurface>
+	<Controls>
+		<!-- 4x4 clip/scene grid (ch16 notes), pad[0]=bottom-left -->
+		<Control name="pad[0]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="100"/></Control>
+		<Control name="pad[1]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="101"/></Control>
+		<Control name="pad[2]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="102"/></Control>
+		<Control name="pad[3]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="103"/></Control>
+		<Control name="pad[4]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="96"/></Control>
+		<Control name="pad[5]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="97"/></Control>
+		<Control name="pad[6]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="98"/></Control>
+		<Control name="pad[7]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="99"/></Control>
+		<Control name="pad[8]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="92"/></Control>
+		<Control name="pad[9]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="93"/></Control>
+		<Control name="pad[10]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="94"/></Control>
+		<Control name="pad[11]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="95"/></Control>
+		<Control name="pad[12]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="88"/></Control>
+		<Control name="pad[13]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="89"/></Control>
+		<Control name="pad[14]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="90"/></Control>
+		<Control name="pad[15]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="91"/></Control>
+		<Control name="padLEDState[0]" options="transmit fastupdate"/>
+		<Control name="padLEDState[1]" options="transmit fastupdate"/>
+		<Control name="padLEDState[2]" options="transmit fastupdate"/>
+		<Control name="padLEDState[3]" options="transmit fastupdate"/>
+		<Control name="padLEDState[4]" options="transmit fastupdate"/>
+		<Control name="padLEDState[5]" options="transmit fastupdate"/>
+		<Control name="padLEDState[6]" options="transmit fastupdate"/>
+		<Control name="padLEDState[7]" options="transmit fastupdate"/>
+		<Control name="padLEDState[8]" options="transmit fastupdate"/>
+		<Control name="padLEDState[9]" options="transmit fastupdate"/>
+		<Control name="padLEDState[10]" options="transmit fastupdate"/>
+		<Control name="padLEDState[11]" options="transmit fastupdate"/>
+		<Control name="padLEDState[12]" options="transmit fastupdate"/>
+		<Control name="padLEDState[13]" options="transmit fastupdate"/>
+		<Control name="padLEDState[14]" options="transmit fastupdate"/>
+		<Control name="padLEDState[15]" options="transmit fastupdate"/>
+		<Control name="padLEDAnimation[0]" options="transmit fastupdate"/>
+		<Control name="padLEDAnimation[1]" options="transmit fastupdate"/>
+		<Control name="padLEDAnimation[2]" options="transmit fastupdate"/>
+		<Control name="padLEDAnimation[3]" options="transmit fastupdate"/>
+		<Control name="padLEDAnimation[4]" options="transmit fastupdate"/>
+		<Control name="padLEDAnimation[5]" options="transmit fastupdate"/>
+		<Control name="padLEDAnimation[6]" options="transmit fastupdate"/>
+		<Control name="padLEDAnimation[7]" options="transmit fastupdate"/>
+		<Control name="padLEDAnimation[8]" options="transmit fastupdate"/>
+		<Control name="padLEDAnimation[9]" options="transmit fastupdate"/>
+		<Control name="padLEDAnimation[10]" options="transmit fastupdate"/>
+		<Control name="padLEDAnimation[11]" options="transmit fastupdate"/>
+		<Control name="padLEDAnimation[12]" options="transmit fastupdate"/>
+		<Control name="padLEDAnimation[13]" options="transmit fastupdate"/>
+		<Control name="padLEDAnimation[14]" options="transmit fastupdate"/>
+		<Control name="padLEDAnimation[15]" options="transmit fastupdate"/>
+		<Control name="padLEDColor[0]" type="rgb" options="transmit fastupdate"/>
+		<Control name="padLEDColor[1]" type="rgb" options="transmit fastupdate"/>
+		<Control name="padLEDColor[2]" type="rgb" options="transmit fastupdate"/>
+		<Control name="padLEDColor[3]" type="rgb" options="transmit fastupdate"/>
+		<Control name="padLEDColor[4]" type="rgb" options="transmit fastupdate"/>
+		<Control name="padLEDColor[5]" type="rgb" options="transmit fastupdate"/>
+		<Control name="padLEDColor[6]" type="rgb" options="transmit fastupdate"/>
+		<Control name="padLEDColor[7]" type="rgb" options="transmit fastupdate"/>
+		<Control name="padLEDColor[8]" type="rgb" options="transmit fastupdate"/>
+		<Control name="padLEDColor[9]" type="rgb" options="transmit fastupdate"/>
+		<Control name="padLEDColor[10]" type="rgb" options="transmit fastupdate"/>
+		<Control name="padLEDColor[11]" type="rgb" options="transmit fastupdate"/>
+		<Control name="padLEDColor[12]" type="rgb" options="transmit fastupdate"/>
+		<Control name="padLEDColor[13]" type="rgb" options="transmit fastupdate"/>
+		<Control name="padLEDColor[14]" type="rgb" options="transmit fastupdate"/>
+		<Control name="padLEDColor[15]" type="rgb" options="transmit fastupdate"/>
+		<!-- Session nav + stop-all (ch16 notes) -->
+		<Control name="navLeft" type="button" options="receive"><MidiMessage status="#9F" address="84"/></Control>
+		<Control name="navUp" type="button" options="receive"><MidiMessage status="#9F" address="85"/></Control>
+		<Control name="navDown" type="button" options="receive"><MidiMessage status="#9F" address="86"/></Control>
+		<Control name="navRight" type="button" options="receive"><MidiMessage status="#9F" address="87"/></Control>
+		<Control name="stopAll" type="button" options="receive"><MidiMessage status="#9F" address="127"/></Control>
+		<!-- Mixer: faders ch1 CC44-51 -->
+		<Control name="fader[0]" title="Fader 1" type="fader" options="receive public"><MidiMessage status="#B0" channel="#00" address="#2C"/></Control>
+		<Control name="fader[1]" title="Fader 2" type="fader" options="receive public"><MidiMessage status="#B0" channel="#00" address="#2D"/></Control>
+		<Control name="fader[2]" title="Fader 3" type="fader" options="receive public"><MidiMessage status="#B0" channel="#00" address="#2E"/></Control>
+		<Control name="fader[3]" title="Fader 4" type="fader" options="receive public"><MidiMessage status="#B0" channel="#00" address="#2F"/></Control>
+		<Control name="fader[4]" title="Fader 5" type="fader" options="receive public"><MidiMessage status="#B0" channel="#00" address="#30"/></Control>
+		<Control name="fader[5]" title="Fader 6" type="fader" options="receive public"><MidiMessage status="#B0" channel="#00" address="#31"/></Control>
+		<Control name="fader[6]" title="Fader 7" type="fader" options="receive public"><MidiMessage status="#B0" channel="#00" address="#32"/></Control>
+		<Control name="fader[7]" title="Fader 8" type="fader" options="receive public"><MidiMessage status="#B0" channel="#00" address="#33"/></Control>
+		<!-- Sends: encoder rows 2-4 (ch1). Row 1 (pan) left unmapped. -->
+		<Control name="send[0][0]" title="Snd1 1" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#0A"/></Control>
+		<Control name="send[0][1]" title="Snd1 2" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#0B"/></Control>
+		<Control name="send[0][2]" title="Snd1 3" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#0C"/></Control>
+		<Control name="send[0][3]" title="Snd1 4" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#0D"/></Control>
+		<Control name="send[0][4]" title="Snd1 5" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#0E"/></Control>
+		<Control name="send[0][5]" title="Snd1 6" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#0F"/></Control>
+		<Control name="send[0][6]" title="Snd1 7" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#10"/></Control>
+		<Control name="send[0][7]" title="Snd1 8" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#11"/></Control>
+		<Control name="send[1][0]" title="Snd2 1" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#12"/></Control>
+		<Control name="send[1][1]" title="Snd2 2" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#13"/></Control>
+		<Control name="send[1][2]" title="Snd2 3" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#14"/></Control>
+		<Control name="send[1][3]" title="Snd2 4" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#15"/></Control>
+		<Control name="send[1][4]" title="Snd2 5" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#16"/></Control>
+		<Control name="send[1][5]" title="Snd2 6" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#17"/></Control>
+		<Control name="send[1][6]" title="Snd2 7" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#18"/></Control>
+		<Control name="send[1][7]" title="Snd2 8" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#19"/></Control>
+		<Control name="send[2][0]" title="Snd3 1" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#1A"/></Control>
+		<Control name="send[2][1]" title="Snd3 2" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#1B"/></Control>
+		<Control name="send[2][2]" title="Snd3 3" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#1C"/></Control>
+		<Control name="send[2][3]" title="Snd3 4" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#1D"/></Control>
+		<Control name="send[2][4]" title="Snd3 5" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#1E"/></Control>
+		<Control name="send[2][5]" title="Snd3 6" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#1F"/></Control>
+		<Control name="send[2][6]" title="Snd3 7" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#21"/></Control>
+		<Control name="send[2][7]" title="Snd3 8" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#22"/></Control>
+		<!-- mute buttons ch2 -->
+		<Control name="mute[0]" title="Mute 1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#23"/></Control>
+		<Control name="mute[1]" title="Mute 2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#24"/></Control>
+		<Control name="mute[2]" title="Mute 3" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#25"/></Control>
+		<Control name="mute[3]" title="Mute 4" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#27"/></Control>
+		<Control name="mute[4]" title="Mute 5" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#28"/></Control>
+		<Control name="mute[5]" title="Mute 6" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#29"/></Control>
+		<Control name="mute[6]" title="Mute 7" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#2A"/></Control>
+		<Control name="mute[7]" title="Mute 8" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#2B"/></Control>
+		<!-- Encoder-push buttons (momentary), ch1 notes = each encoder CC. Assign via Control Link. -->
+		<Control name="push[0][0]" title="Push 1-1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#01"/></Control>
+		<Control name="push[0][1]" title="Push 1-2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#0A"/></Control>
+		<Control name="push[0][2]" title="Push 1-3" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#12"/></Control>
+		<Control name="push[0][3]" title="Push 1-4" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#1A"/></Control>
+		<Control name="push[1][0]" title="Push 2-1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#02"/></Control>
+		<Control name="push[1][1]" title="Push 2-2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#0B"/></Control>
+		<Control name="push[1][2]" title="Push 2-3" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#13"/></Control>
+		<Control name="push[1][3]" title="Push 2-4" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#1B"/></Control>
+		<Control name="push[2][0]" title="Push 3-1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#03"/></Control>
+		<Control name="push[2][1]" title="Push 3-2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#0C"/></Control>
+		<Control name="push[2][2]" title="Push 3-3" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#14"/></Control>
+		<Control name="push[2][3]" title="Push 3-4" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#1C"/></Control>
+		<Control name="push[3][0]" title="Push 4-1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#04"/></Control>
+		<Control name="push[3][1]" title="Push 4-2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#0D"/></Control>
+		<Control name="push[3][2]" title="Push 4-3" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#15"/></Control>
+		<Control name="push[3][3]" title="Push 4-4" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#1D"/></Control>
+		<Control name="push[4][0]" title="Push 5-1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#05"/></Control>
+		<Control name="push[4][1]" title="Push 5-2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#0E"/></Control>
+		<Control name="push[4][2]" title="Push 5-3" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#16"/></Control>
+		<Control name="push[4][3]" title="Push 5-4" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#1E"/></Control>
+		<Control name="push[5][0]" title="Push 6-1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#07"/></Control>
+		<Control name="push[5][1]" title="Push 6-2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#0F"/></Control>
+		<Control name="push[5][2]" title="Push 6-3" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#17"/></Control>
+		<Control name="push[5][3]" title="Push 6-4" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#1F"/></Control>
+		<Control name="push[6][0]" title="Push 7-1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#08"/></Control>
+		<Control name="push[6][1]" title="Push 7-2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#10"/></Control>
+		<Control name="push[6][2]" title="Push 7-3" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#18"/></Control>
+		<Control name="push[6][3]" title="Push 7-4" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#21"/></Control>
+		<Control name="push[7][0]" title="Push 8-1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#09"/></Control>
+		<Control name="push[7][1]" title="Push 8-2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#11"/></Control>
+		<Control name="push[7][2]" title="Push 8-3" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#19"/></Control>
+		<Control name="push[7][3]" title="Push 8-4" type="trigger" options="receive public"><MidiMessage status="#90" channel="#00" address="#22"/></Control>
+	</Controls>
+
+	<ColorTables><ColorTable name="DropColors" cachesize="64" compare="equal"/></ColorTables>
+
+	<Mappings>
+		<PadSection name="PadSectionElement" rows="4" roles="launcherinput">
+			<foreach variable="$i" count="16">
+				<Pad control="pad[$i]">
+					<Value control="padLEDState[$i]" param="state"/>
+					<PlainValue control="padLEDAnimation[$i]" param="animation"/>
+					<ColorIndex table="DropColors" control="padLEDColor[$i]" param="color"/>
+				</Pad>
+			</foreach>
+		</PadSection>
+
+		<Global>
+			<Invoke control="navUp" onReceive="onLauncherNavigateUp"/>
+			<Invoke control="navDown" onReceive="onLauncherNavigateDown"/>
+			<Invoke control="navLeft" onReceive="onLauncherNavigateLeft"/>
+			<Invoke control="navRight" onReceive="onLauncherNavigateRight"/>
+			<Command control="stopAll" command.category="Launcher" command.name="Stop All"/>
+		</Global>
+
+		<DeviceMapping device="MixerConsole" name="MixerMapping">
+			<PlacementBank target="RemoteBank" pagesize="8" name="ChannelBankElement">
+				<foreach variable="$ch" count="8">
+					<Strip>
+						<Bank target="Sends" name="SendsBankElement">
+							<foreach variable="$s" count="3">
+								<Strip><Value control="send[$s][$ch]" param="sendlevel"/></Strip>
+							</foreach>
+						</Bank>
+						<Value control="fader[$ch]" param="volume"/>
+						<Toggle control="mute[$ch]" param="mute" options="momentary"/>
+					</Strip>
+				</foreach>
+			</PlacementBank>
+		</DeviceMapping>
+	</Mappings>
+</ControlSurface>
