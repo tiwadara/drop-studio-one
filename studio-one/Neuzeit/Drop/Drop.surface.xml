@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Neuzeit Instruments "Drop" - launcher + page nav + 64-ch mixer (8 layers A-H) + knobs + pushes. -->
+<!-- Neuzeit Instruments "Drop" - launcher + page nav + 64-ch mixer (8 layers, mute LED feedback) + knobs + pushes. -->
 <ControlSurface>
 	<Controls>
 		<!-- 4x4 clip/scene grid (ch16 notes 88-103), pad[0]=TOP-left -->
@@ -78,7 +78,7 @@
 		<Control name="pageDown" type="button" options="receive"><MidiMessage status="#9F" address="105"/></Control>
 		<Control name="pageLeft" type="button" options="receive"><MidiMessage status="#9F" address="106"/></Control>
 		<Control name="pageRight" type="button" options="receive"><MidiMessage status="#9F" address="107"/></Control>
-		<!-- 64 faders: 8 layers A-H (ch 1/3/5/7). fader[i] -> mixer channel i+1 -->
+		<!-- 64 faders: 8 layers A-H (ch 1/3/5/7) -> mixer ch 1-64 -->
 		<Control name="fader[0]" title="Fader A1" type="fader" options="receive public"><MidiMessage status="#B0" channel="#00" address="#2C"/></Control>
 		<Control name="fader[1]" title="Fader A2" type="fader" options="receive public"><MidiMessage status="#B0" channel="#00" address="#2D"/></Control>
 		<Control name="fader[2]" title="Fader A3" type="fader" options="receive public"><MidiMessage status="#B0" channel="#00" address="#2E"/></Control>
@@ -143,71 +143,71 @@
 		<Control name="fader[61]" title="Fader H6" type="fader" options="receive public"><MidiMessage status="#B0" channel="#06" address="#63"/></Control>
 		<Control name="fader[62]" title="Fader H7" type="fader" options="receive public"><MidiMessage status="#B0" channel="#06" address="#64"/></Control>
 		<Control name="fader[63]" title="Fader H8" type="fader" options="receive public"><MidiMessage status="#B0" channel="#06" address="#65"/></Control>
-		<!-- 64 mutes: 8 layers A-H (ch 2/4/6/8) -->
-		<Control name="mute[0]" title="Mute A1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#23"/></Control>
-		<Control name="mute[1]" title="Mute A2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#24"/></Control>
-		<Control name="mute[2]" title="Mute A3" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#25"/></Control>
-		<Control name="mute[3]" title="Mute A4" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#27"/></Control>
-		<Control name="mute[4]" title="Mute A5" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#28"/></Control>
-		<Control name="mute[5]" title="Mute A6" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#29"/></Control>
-		<Control name="mute[6]" title="Mute A7" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#2A"/></Control>
-		<Control name="mute[7]" title="Mute A8" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#2B"/></Control>
-		<Control name="mute[8]" title="Mute B1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#54"/></Control>
-		<Control name="mute[9]" title="Mute B2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#55"/></Control>
-		<Control name="mute[10]" title="Mute B3" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#56"/></Control>
-		<Control name="mute[11]" title="Mute B4" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#57"/></Control>
-		<Control name="mute[12]" title="Mute B5" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#58"/></Control>
-		<Control name="mute[13]" title="Mute B6" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#59"/></Control>
-		<Control name="mute[14]" title="Mute B7" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#5A"/></Control>
-		<Control name="mute[15]" title="Mute B8" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#5B"/></Control>
-		<Control name="mute[16]" title="Mute C1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#03" address="#23"/></Control>
-		<Control name="mute[17]" title="Mute C2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#03" address="#24"/></Control>
-		<Control name="mute[18]" title="Mute C3" type="trigger" options="receive public"><MidiMessage status="#90" channel="#03" address="#25"/></Control>
-		<Control name="mute[19]" title="Mute C4" type="trigger" options="receive public"><MidiMessage status="#90" channel="#03" address="#27"/></Control>
-		<Control name="mute[20]" title="Mute C5" type="trigger" options="receive public"><MidiMessage status="#90" channel="#03" address="#28"/></Control>
-		<Control name="mute[21]" title="Mute C6" type="trigger" options="receive public"><MidiMessage status="#90" channel="#03" address="#29"/></Control>
-		<Control name="mute[22]" title="Mute C7" type="trigger" options="receive public"><MidiMessage status="#90" channel="#03" address="#2A"/></Control>
-		<Control name="mute[23]" title="Mute C8" type="trigger" options="receive public"><MidiMessage status="#90" channel="#03" address="#2B"/></Control>
-		<Control name="mute[24]" title="Mute D1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#03" address="#54"/></Control>
-		<Control name="mute[25]" title="Mute D2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#03" address="#55"/></Control>
-		<Control name="mute[26]" title="Mute D3" type="trigger" options="receive public"><MidiMessage status="#90" channel="#03" address="#56"/></Control>
-		<Control name="mute[27]" title="Mute D4" type="trigger" options="receive public"><MidiMessage status="#90" channel="#03" address="#57"/></Control>
-		<Control name="mute[28]" title="Mute D5" type="trigger" options="receive public"><MidiMessage status="#90" channel="#03" address="#58"/></Control>
-		<Control name="mute[29]" title="Mute D6" type="trigger" options="receive public"><MidiMessage status="#90" channel="#03" address="#59"/></Control>
-		<Control name="mute[30]" title="Mute D7" type="trigger" options="receive public"><MidiMessage status="#90" channel="#03" address="#5A"/></Control>
-		<Control name="mute[31]" title="Mute D8" type="trigger" options="receive public"><MidiMessage status="#90" channel="#03" address="#5B"/></Control>
-		<Control name="mute[32]" title="Mute E1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#05" address="#23"/></Control>
-		<Control name="mute[33]" title="Mute E2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#05" address="#24"/></Control>
-		<Control name="mute[34]" title="Mute E3" type="trigger" options="receive public"><MidiMessage status="#90" channel="#05" address="#25"/></Control>
-		<Control name="mute[35]" title="Mute E4" type="trigger" options="receive public"><MidiMessage status="#90" channel="#05" address="#27"/></Control>
-		<Control name="mute[36]" title="Mute E5" type="trigger" options="receive public"><MidiMessage status="#90" channel="#05" address="#28"/></Control>
-		<Control name="mute[37]" title="Mute E6" type="trigger" options="receive public"><MidiMessage status="#90" channel="#05" address="#29"/></Control>
-		<Control name="mute[38]" title="Mute E7" type="trigger" options="receive public"><MidiMessage status="#90" channel="#05" address="#2A"/></Control>
-		<Control name="mute[39]" title="Mute E8" type="trigger" options="receive public"><MidiMessage status="#90" channel="#05" address="#2B"/></Control>
-		<Control name="mute[40]" title="Mute F1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#05" address="#54"/></Control>
-		<Control name="mute[41]" title="Mute F2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#05" address="#55"/></Control>
-		<Control name="mute[42]" title="Mute F3" type="trigger" options="receive public"><MidiMessage status="#90" channel="#05" address="#56"/></Control>
-		<Control name="mute[43]" title="Mute F4" type="trigger" options="receive public"><MidiMessage status="#90" channel="#05" address="#57"/></Control>
-		<Control name="mute[44]" title="Mute F5" type="trigger" options="receive public"><MidiMessage status="#90" channel="#05" address="#58"/></Control>
-		<Control name="mute[45]" title="Mute F6" type="trigger" options="receive public"><MidiMessage status="#90" channel="#05" address="#59"/></Control>
-		<Control name="mute[46]" title="Mute F7" type="trigger" options="receive public"><MidiMessage status="#90" channel="#05" address="#5A"/></Control>
-		<Control name="mute[47]" title="Mute F8" type="trigger" options="receive public"><MidiMessage status="#90" channel="#05" address="#5B"/></Control>
-		<Control name="mute[48]" title="Mute G1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#07" address="#23"/></Control>
-		<Control name="mute[49]" title="Mute G2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#07" address="#24"/></Control>
-		<Control name="mute[50]" title="Mute G3" type="trigger" options="receive public"><MidiMessage status="#90" channel="#07" address="#25"/></Control>
-		<Control name="mute[51]" title="Mute G4" type="trigger" options="receive public"><MidiMessage status="#90" channel="#07" address="#27"/></Control>
-		<Control name="mute[52]" title="Mute G5" type="trigger" options="receive public"><MidiMessage status="#90" channel="#07" address="#28"/></Control>
-		<Control name="mute[53]" title="Mute G6" type="trigger" options="receive public"><MidiMessage status="#90" channel="#07" address="#29"/></Control>
-		<Control name="mute[54]" title="Mute G7" type="trigger" options="receive public"><MidiMessage status="#90" channel="#07" address="#2A"/></Control>
-		<Control name="mute[55]" title="Mute G8" type="trigger" options="receive public"><MidiMessage status="#90" channel="#07" address="#2B"/></Control>
-		<Control name="mute[56]" title="Mute H1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#07" address="#54"/></Control>
-		<Control name="mute[57]" title="Mute H2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#07" address="#55"/></Control>
-		<Control name="mute[58]" title="Mute H3" type="trigger" options="receive public"><MidiMessage status="#90" channel="#07" address="#56"/></Control>
-		<Control name="mute[59]" title="Mute H4" type="trigger" options="receive public"><MidiMessage status="#90" channel="#07" address="#57"/></Control>
-		<Control name="mute[60]" title="Mute H5" type="trigger" options="receive public"><MidiMessage status="#90" channel="#07" address="#58"/></Control>
-		<Control name="mute[61]" title="Mute H6" type="trigger" options="receive public"><MidiMessage status="#90" channel="#07" address="#59"/></Control>
-		<Control name="mute[62]" title="Mute H7" type="trigger" options="receive public"><MidiMessage status="#90" channel="#07" address="#5A"/></Control>
-		<Control name="mute[63]" title="Mute H8" type="trigger" options="receive public"><MidiMessage status="#90" channel="#07" address="#5B"/></Control>
+		<!-- 64 mutes: bidirectional (receive press + transmit LED). ch 2/4/6/8 -->
+		<Control name="mute[0]" title="Mute A1" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#01" address="#23"/></Control>
+		<Control name="mute[1]" title="Mute A2" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#01" address="#24"/></Control>
+		<Control name="mute[2]" title="Mute A3" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#01" address="#25"/></Control>
+		<Control name="mute[3]" title="Mute A4" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#01" address="#27"/></Control>
+		<Control name="mute[4]" title="Mute A5" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#01" address="#28"/></Control>
+		<Control name="mute[5]" title="Mute A6" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#01" address="#29"/></Control>
+		<Control name="mute[6]" title="Mute A7" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#01" address="#2A"/></Control>
+		<Control name="mute[7]" title="Mute A8" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#01" address="#2B"/></Control>
+		<Control name="mute[8]" title="Mute B1" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#01" address="#54"/></Control>
+		<Control name="mute[9]" title="Mute B2" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#01" address="#55"/></Control>
+		<Control name="mute[10]" title="Mute B3" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#01" address="#56"/></Control>
+		<Control name="mute[11]" title="Mute B4" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#01" address="#57"/></Control>
+		<Control name="mute[12]" title="Mute B5" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#01" address="#58"/></Control>
+		<Control name="mute[13]" title="Mute B6" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#01" address="#59"/></Control>
+		<Control name="mute[14]" title="Mute B7" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#01" address="#5A"/></Control>
+		<Control name="mute[15]" title="Mute B8" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#01" address="#5B"/></Control>
+		<Control name="mute[16]" title="Mute C1" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#03" address="#23"/></Control>
+		<Control name="mute[17]" title="Mute C2" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#03" address="#24"/></Control>
+		<Control name="mute[18]" title="Mute C3" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#03" address="#25"/></Control>
+		<Control name="mute[19]" title="Mute C4" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#03" address="#27"/></Control>
+		<Control name="mute[20]" title="Mute C5" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#03" address="#28"/></Control>
+		<Control name="mute[21]" title="Mute C6" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#03" address="#29"/></Control>
+		<Control name="mute[22]" title="Mute C7" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#03" address="#2A"/></Control>
+		<Control name="mute[23]" title="Mute C8" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#03" address="#2B"/></Control>
+		<Control name="mute[24]" title="Mute D1" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#03" address="#54"/></Control>
+		<Control name="mute[25]" title="Mute D2" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#03" address="#55"/></Control>
+		<Control name="mute[26]" title="Mute D3" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#03" address="#56"/></Control>
+		<Control name="mute[27]" title="Mute D4" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#03" address="#57"/></Control>
+		<Control name="mute[28]" title="Mute D5" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#03" address="#58"/></Control>
+		<Control name="mute[29]" title="Mute D6" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#03" address="#59"/></Control>
+		<Control name="mute[30]" title="Mute D7" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#03" address="#5A"/></Control>
+		<Control name="mute[31]" title="Mute D8" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#03" address="#5B"/></Control>
+		<Control name="mute[32]" title="Mute E1" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#05" address="#23"/></Control>
+		<Control name="mute[33]" title="Mute E2" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#05" address="#24"/></Control>
+		<Control name="mute[34]" title="Mute E3" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#05" address="#25"/></Control>
+		<Control name="mute[35]" title="Mute E4" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#05" address="#27"/></Control>
+		<Control name="mute[36]" title="Mute E5" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#05" address="#28"/></Control>
+		<Control name="mute[37]" title="Mute E6" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#05" address="#29"/></Control>
+		<Control name="mute[38]" title="Mute E7" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#05" address="#2A"/></Control>
+		<Control name="mute[39]" title="Mute E8" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#05" address="#2B"/></Control>
+		<Control name="mute[40]" title="Mute F1" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#05" address="#54"/></Control>
+		<Control name="mute[41]" title="Mute F2" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#05" address="#55"/></Control>
+		<Control name="mute[42]" title="Mute F3" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#05" address="#56"/></Control>
+		<Control name="mute[43]" title="Mute F4" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#05" address="#57"/></Control>
+		<Control name="mute[44]" title="Mute F5" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#05" address="#58"/></Control>
+		<Control name="mute[45]" title="Mute F6" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#05" address="#59"/></Control>
+		<Control name="mute[46]" title="Mute F7" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#05" address="#5A"/></Control>
+		<Control name="mute[47]" title="Mute F8" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#05" address="#5B"/></Control>
+		<Control name="mute[48]" title="Mute G1" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#07" address="#23"/></Control>
+		<Control name="mute[49]" title="Mute G2" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#07" address="#24"/></Control>
+		<Control name="mute[50]" title="Mute G3" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#07" address="#25"/></Control>
+		<Control name="mute[51]" title="Mute G4" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#07" address="#27"/></Control>
+		<Control name="mute[52]" title="Mute G5" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#07" address="#28"/></Control>
+		<Control name="mute[53]" title="Mute G6" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#07" address="#29"/></Control>
+		<Control name="mute[54]" title="Mute G7" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#07" address="#2A"/></Control>
+		<Control name="mute[55]" title="Mute G8" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#07" address="#2B"/></Control>
+		<Control name="mute[56]" title="Mute H1" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#07" address="#54"/></Control>
+		<Control name="mute[57]" title="Mute H2" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#07" address="#55"/></Control>
+		<Control name="mute[58]" title="Mute H3" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#07" address="#56"/></Control>
+		<Control name="mute[59]" title="Mute H4" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#07" address="#57"/></Control>
+		<Control name="mute[60]" title="Mute H5" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#07" address="#58"/></Control>
+		<Control name="mute[61]" title="Mute H6" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#07" address="#59"/></Control>
+		<Control name="mute[62]" title="Mute H7" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#07" address="#5A"/></Control>
+		<Control name="mute[63]" title="Mute H8" type="button" options="receive transmit public"><MidiMessage status="#90" channel="#07" address="#5B"/></Control>
 		<!-- 32 encoders (rows 1-4) ch1: public + unmapped -> Control Link to plugins -->
 		<Control name="knob[0]" title="Knob 1" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#01"/></Control>
 		<Control name="knob[1]" title="Knob 2" type="knob" options="receive public"><MidiMessage status="#B0" channel="#00" address="#02"/></Control>
@@ -301,13 +301,14 @@
 			<Command control="stopAll" command.category="Launcher" command.name="Stop All"/>
 		</Global>
 
-		<!-- 64-channel mixer: 8 layers of faders/mutes -> channels 1-64 -->
+		<!-- 64-channel mixer: faders->volume, mutes->mute (with LED feedback via <Value>) -->
 		<DeviceMapping device="MixerConsole" name="MixerMapping">
 			<PlacementBank target="RemoteBank" pagesize="64" name="ChannelBankElement">
 				<foreach variable="$ch" count="64">
 					<Strip>
 						<Value control="fader[$ch]" param="volume"/>
 						<Toggle control="mute[$ch]" param="mute" options="momentary"/>
+						<Value control="mute[$ch]" param="mute"/>
 					</Strip>
 				</foreach>
 			</PlacementBank>
