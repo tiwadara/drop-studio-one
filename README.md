@@ -33,19 +33,21 @@ drop-config/
 
 ## How the Drop config (`daw-init-studioone.json`) behaves
 
-This is a Drop DAW config with two changes vs. a default export, so the Drop sends what Studio One expects on **MIDI channel 1** (grid/nav are on channel 16):
+A working Drop DAW config, set up for the Studio One surface. Import it into the Drop (back up your own config first). It carries example state (fader/rotary positions, snapshots) — overwrite that with your own once loaded.
 
-| Control | What it sends | Change |
-|--------|----------------|--------|
-| **Faders A-1…A-8** | CC 44–51, ch 1 | `maxOut` capped at **96** |
-| **Encoders A (32)** | CC, ch 1 (pan row + 3 send rows) | unchanged |
-| **Encoder pushes (32)** | **Notes 1–34, ch 2** (skipping 6 & 32) | switched from internal behaviour to **momentary MIDI notes** |
-| **Mute buttons A-1…A-8** | ch 2 | unchanged |
+| Control | What it sends |
+|--------|----------------|
+| **Faders** | 14-bit CC, ch 1/3/5/7 — 8 layers A–H (Layer A = CC 44–51 ch1 … reach 64 channels) |
+| **Encoders (32/layer)** | CC on ch 1/3/5/7 (`ROT A-x` = CC x) |
+| **Encoder pushes** | **Notes on ch 2** (push note = its encoder's CC number, e.g. PUSH A-7-1 = note 8) |
+| **Mute buttons** | ch 2 notes, **`behavId 3` (latching toggle)** — press stays, LED tracks state |
+| **Grid / nav / stop-all** | Drop's built-in DAW-mode notes on **channel 16** |
 
-Notes:
-- **Push note = its encoder's CC number** (e.g. `PUSH A-7-1` → note 8, because `ROT A-7-1` → CC 8). Numbers 6 and 32 are skipped because they are reserved MIDI controllers.
-- The pushes are set to `behavId 4` (momentary, copied from the mute buttons). If that doesn't read as **"Temporary"** on your unit, set those pushes to *Temporary* in the Drop editor — the note assignments stay.
-- The grid / scene-launch / nav / stop-all buttons use the Drop's built-in DAW-mode notes on **channel 16** and need no config change.
+Key points:
+- **Mutes use `behavId 3`** (latching), so they hold their state and light correctly. `behavId 4` is momentary (won't stay) — that was the bug.
+- **Encoder pushes** are set per-taste: `behavId 3` = latching, `behavId 4` = temporary/momentary. Set the ones you use in the Drop editor.
+- **Notes 6 and 32 are skipped** in the encoder/push numbering (reserved MIDI controllers).
+- The grid / nav / stop-all use channel 16 and need no config change.
 
 ---
 
