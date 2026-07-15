@@ -307,7 +307,7 @@
 				<foreach variable="$ch" count="64">
 					<Strip>
 						<Value control="fader[$ch]" param="volume"/>
-						<Toggle control="mute[$ch]" param="mute" options="momentary"/>
+						<Toggle control="mute[$ch]" param="mute"/>
 						<Value control="mute[$ch]" param="mute"/>
 					</Strip>
 				</foreach>
