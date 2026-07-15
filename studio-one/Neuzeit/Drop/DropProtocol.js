@@ -43,15 +43,13 @@ DropProtocol.kLayoutVelocity   = 100;
 //   row2: 96 97 98 99
 //   row3: 100 101 102 103
 //
-// Studio One's PadSection uses a BOTTOM-LEFT origin (pad[0] = bottom-left), matching the
-// Novation Launchpad integration. So we feed the grid bottom row first.
-// If the grid appears vertically mirrored on the hardware, swap to top-first ordering
-// (i.e. reverse these four rows).
+// TOP-LEFT origin (pad[0] = top-left) — MUST match the pad[i] note order in Drop.surface.xml,
+// so LED feedback (color/blink) lands on the same pad the launcher lit.
 DropProtocol.kPadNotes = [
-    100, 101, 102, 103,   // pad[0..3]   -> bottom physical row
-     96,  97,  98,  99,   // pad[4..7]
-     92,  93,  94,  95,   // pad[8..11]
-     88,  89,  90,  91    // pad[12..15] -> top physical row
+     88,  89,  90,  91,   // pad[0..3]   -> top physical row
+     92,  93,  94,  95,   // pad[4..7]
+     96,  97,  98,  99,   // pad[8..11]
+    100, 101, 102, 103    // pad[12..15] -> bottom physical row
 ];
 
 // --- Non-grid buttons (all channel 16 notes) -----------------------------------------------
