@@ -40,7 +40,9 @@ class DropComponent extends PreSonus.ControlSurfaceComponent {
         c.addNullHandler();                                          // mode 0 = kNone
         c.addHandlerForRole(PreSonus.PadSectionRole.kLauncherInput); // mode 1 = kLauncher
         this.launcherHandler = c.getHandler(PadMode.kLauncher);
-        this.launcherHandler.setMappingMode(PreSonus.PadSectionLauncherMode.kScenesOnly);
+        // Grid mode = clip cells (4x4 clip matrix), matching the Drop's native DAW
+        // clip-launcher mode. Whole-scene launch lives on the Drop's Shift layer.
+        this.launcherHandler.setMappingMode(PreSonus.PadSectionLauncherMode.kCellsOnly);
         c.setActiveHandler(PadMode.kLauncher);
         this.gridComponent = c;
 

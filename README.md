@@ -4,7 +4,7 @@ An unofficial [PreSonus Studio One](https://www.presonus.com/products/studio-one
 
 It turns the Drop into a **Launcher + mixer surface**:
 
-- **4×4 pad grid → scene launch** (each pad fires a Launcher scene), with LED colour/state feedback
+- **4×4 pad grid → clip launch** (the grid is a 4-track × 4-scene clip matrix — "grid mode"), with LED colour/state feedback. Whole-scene launch is the Drop's Shift layer.
 - **8 faders → channel volume**
 - **32 encoders → 3 sends per channel** (top encoder row left free)
 - **8 mute buttons → channel mute**
@@ -55,7 +55,7 @@ Key points:
 
 | Drop control | MIDI | Studio One target |
 |---|---|---|
-| 4×4 grid (top-left first) | ch16 notes 88–103 | Launcher **scene launch** (`kScenesOnly`) |
+| 4×4 grid (top-left first) | ch16 notes 88–103 | Launcher **clip launch** — 4×4 clip cells (`kCellsOnly`) |
 | Session ◀ ▲ ▼ ▶ | ch16 notes 84–87 | move the focus box by **1** |
 | Bottom pad row ◀ ▲ ▼ ▶ | ch16 notes 104–107 | **page** the focus box by **4** |
 | Stop-All | ch16 note 127 | Launcher *Stop All* |
