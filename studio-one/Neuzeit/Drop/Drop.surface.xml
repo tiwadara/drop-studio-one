@@ -92,10 +92,12 @@
 		<Control name="stopAll" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#7F"/></Control>
 		<Control name="transportStart" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#01"/></Control>
 		<Control name="transportStop"  type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#02"/></Control>
-		<!-- Program Change (Drop jump/snapshot) -> launcher scene jump. ch13 = channel #0C.
-		     One control per program number 0..127 (program = address), FCB1010 pattern. -->
+		<!-- Hidden direct scene-launch pads. A kScenesOnly PadSection maps pad[i] -> scene i,
+		     so pressing sceneLaunchPad[N] LAUNCHES scene N (no viewport movement). These are
+		     driven internally: DropMidiDevice translates a Program Change (program = N) into a
+		     note-on/off on ch14 (#0D) note N, which "presses" this pad. 128 = full PC range. -->
 		<foreach variable="$i" count="128">
-			<Control name="jumpPC[$i]" type="button" options="receive"><MidiMessage status="#C0" channel="#0C" address="$i"/></Control>
+			<Control name="sceneLaunchPad[$i]" type="button" options="receive"><MidiMessage status="#90" channel="#0D" address="$i"/></Control>
 		</foreach>
 		<!-- 64 faders -->
 		<Control name="fader[0]" title="Fader A1" type="fader" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#2C"/></Control>
@@ -596,6 +598,11 @@
 				<Value control="padLEDState[$i]" param="state"/><PlainValue control="padLEDAnimation[$i]" param="animation"/><ColorIndex table="DropColors" control="padLEDColor[$i]" param="color"/>
 			</Pad></foreach>
 		</PadSection>
+		<!-- Hidden scene-launch grid: pad[i] -> scene i (kScenesOnly, set in DropComponent).
+		     Input-only (no LED). Pressed internally via Program-Change translation. -->
+		<PadSection name="SceneLaunchElement" rows="128" roles="launcherinput">
+			<foreach variable="$i" count="128"><Pad control="sceneLaunchPad[$i]"/></foreach>
+		</PadSection>
 		<Global>
 			<Invoke control="navUp" onReceive="onLauncherNavigateUp"/>
 			<Invoke control="navDown" onReceive="onLauncherNavigateDown"/>
@@ -604,10 +611,6 @@
 			<Command control="stopAll" command.category="Launcher" command.name="Stop All"/>
 			<Command control="transportStart" command.category="Transport" command.name="Start"/>
 			<Command control="transportStop"  command.category="Transport" command.name="Stop"/>
-			<!-- Program Change -> jump the launcher to an absolute scene. -->
-			<foreach variable="$i" count="128">
-				<Invoke control="jumpPC[$i]" onReceive="onLauncherJumpScene($i)"/>
-			</foreach>
 		</Global>
 		<DeviceMapping device="MixerConsole" name="MixerMapping">
 			<PlacementBank target="RemoteBank" pagesize="64" name="ChannelBankElement">

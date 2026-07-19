@@ -54,6 +54,19 @@ class DropComponent extends PreSonus.ControlSurfaceComponent {
             this.sceneHandler.setMappingMode(PreSonus.PadSectionLauncherMode.kScenesOnly);
             s.setActiveHandler(PadMode.kLauncher);
         }
+
+        // --- Hidden direct scene-launch grid (pad[i] = scene i) ------------------------------
+        // Driven by Program Change (translated to ch14 notes in DropMidiDevice): pressing
+        // sceneLaunchPad[N] launches scene N with no viewport movement.
+        this.sceneLaunchSection = root.find("SceneLaunchElement");
+        if (this.sceneLaunchSection) {
+            let sl = this.sceneLaunchSection.component;
+            sl.addNullHandler();
+            sl.addHandlerForRole(PreSonus.PadSectionRole.kLauncherInput);
+            this.sceneLaunchHandler = sl.getHandler(PadMode.kLauncher);
+            this.sceneLaunchHandler.setMappingMode(PreSonus.PadSectionLauncherMode.kScenesOnly);
+            sl.setActiveHandler(PadMode.kLauncher);
+        }
     }
 
     onExit() {
@@ -72,8 +85,9 @@ class DropComponent extends PreSonus.ControlSurfaceComponent {
     // Release the grids while the surface is suspended, re-arm on resume.
     onSuspend(state) {
         let mode = state ? PadMode.kNone : PadMode.kLauncher;
-        if (this.padSection)   this.padSection.component.setActiveHandler(mode);
-        if (this.sceneSection) this.sceneSection.component.setActiveHandler(mode);
+        if (this.padSection)         this.padSection.component.setActiveHandler(mode);
+        if (this.sceneSection)       this.sceneSection.component.setActiveHandler(mode);
+        if (this.sceneLaunchSection) this.sceneLaunchSection.component.setActiveHandler(mode);
     }
 
     // --- Launcher viewport navigation (Drop session arrows) --------------------------------
@@ -94,18 +108,6 @@ class DropComponent extends PreSonus.ControlSurfaceComponent {
         this.launcherHandler.setColumnOffset(this.launcherHandler.getColumnOffset() + 1);
     }
 
-    // --- Absolute scene/bank jump (Drop Program Change) ------------------------------------
-    // A PC message (one per program number, bound in the surface) jumps the launcher viewport
-    // to an ABSOLUTE bank: program N -> scene row N * kRowsPerJump. Set kRowsPerJump = 1 for
-    // per-scene granularity, or 4 (grid height) for whole-page/bank jumps.
-    onLauncherJumpScene(index) {
-        if (!this.launcherHandler) return;
-        let rows = DropComponent.kRowsPerJump;
-        this.launcherHandler.setRowOffset(index * rows);
-        if (this.sceneHandler)
-            this.sceneHandler.setRowOffset(index * rows);
-    }
-
     // --- Launcher PAGE navigation (bottom pad row) - jump by a full grid (4) ----------------
     onLauncherPageUp(state) {
         if (!state || !this.launcherHandler) return;
@@ -124,10 +126,6 @@ class DropComponent extends PreSonus.ControlSurfaceComponent {
         this.launcherHandler.setColumnOffset(this.launcherHandler.getColumnOffset() + 4);
     }
 }
-
-// Scenes to jump per Program-Change step. 1 = program N lands on scene N (direct);
-// 4 = whole grid (bank) jump per program step.
-DropComponent.kRowsPerJump = 1;
 
 function createDropComponentInstance() {
     return new DropComponent;
