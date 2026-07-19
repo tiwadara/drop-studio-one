@@ -67,6 +67,25 @@
 		<Control name="padLEDColor[13]" type="rgb" options="transmit fastupdate"/>
 		<Control name="padLEDColor[14]" type="rgb" options="transmit fastupdate"/>
 		<Control name="padLEDColor[15]" type="rgb" options="transmit fastupdate"/>
+		<!-- Scene-launch column (ch16 notes 111/115/119/123) -> whole-scene launch.
+		     Also the target for snapshot->scene: any control configured to emit one of
+		     these notes (e.g. a dedicated encoder-push) launches the matching scene. -->
+		<Control name="sceneLaunch[0]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="111"/></Control>
+		<Control name="sceneLaunch[1]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="115"/></Control>
+		<Control name="sceneLaunch[2]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="119"/></Control>
+		<Control name="sceneLaunch[3]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="123"/></Control>
+		<Control name="sceneLEDState[0]" options="transmit fastupdate"/>
+		<Control name="sceneLEDState[1]" options="transmit fastupdate"/>
+		<Control name="sceneLEDState[2]" options="transmit fastupdate"/>
+		<Control name="sceneLEDState[3]" options="transmit fastupdate"/>
+		<Control name="sceneLEDAnimation[0]" options="transmit fastupdate"/>
+		<Control name="sceneLEDAnimation[1]" options="transmit fastupdate"/>
+		<Control name="sceneLEDAnimation[2]" options="transmit fastupdate"/>
+		<Control name="sceneLEDAnimation[3]" options="transmit fastupdate"/>
+		<Control name="sceneLEDColor[0]" type="rgb" options="transmit fastupdate"/>
+		<Control name="sceneLEDColor[1]" type="rgb" options="transmit fastupdate"/>
+		<Control name="sceneLEDColor[2]" type="rgb" options="transmit fastupdate"/>
+		<Control name="sceneLEDColor[3]" type="rgb" options="transmit fastupdate"/>
 		<!-- Session nav (step) + stop-all (ch16) -->
 		<Control name="navLeft" type="button" options="receive"><MidiMessage status="#9F" address="84"/></Control>
 		<Control name="navUp" type="button" options="receive"><MidiMessage status="#9F" address="85"/></Control>
@@ -285,6 +304,17 @@
 					<Value control="padLEDState[$i]" param="state"/>
 					<PlainValue control="padLEDAnimation[$i]" param="animation"/>
 					<ColorIndex table="DropColors" control="padLEDColor[$i]" param="color"/>
+				</Pad>
+			</foreach>
+		</PadSection>
+
+		<!-- Scene launch (whole-scene / snapshot->scene target) -->
+		<PadSection name="SceneSectionElement" rows="4" roles="launcherinput">
+			<foreach variable="$i" count="4">
+				<Pad control="sceneLaunch[$i]">
+					<Value control="sceneLEDState[$i]" param="state"/>
+					<PlainValue control="sceneLEDAnimation[$i]" param="animation"/>
+					<ColorIndex table="DropColors" control="sceneLEDColor[$i]" param="color"/>
 				</Pad>
 			</foreach>
 		</PadSection>
