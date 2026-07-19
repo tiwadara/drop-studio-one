@@ -92,9 +92,9 @@
 		<Control name="stopAll" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#7F"/></Control>
 		<Control name="transportStart" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#01"/></Control>
 		<Control name="transportStop"  type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#02"/></Control>
-		<!-- Program Change (Drop jump/snapshot) -> launcher scene/bank jump. ch13 = channel #0C.
-		     One control per program number 0..15 (program = address), FCB1010 pattern. -->
-		<foreach variable="$i" count="16">
+		<!-- Program Change (Drop jump/snapshot) -> launcher scene jump. ch13 = channel #0C.
+		     One control per program number 0..127 (program = address), FCB1010 pattern. -->
+		<foreach variable="$i" count="128">
 			<Control name="jumpPC[$i]" type="button" options="receive"><MidiMessage status="#C0" channel="#0C" address="$i"/></Control>
 		</foreach>
 		<!-- 64 faders -->
@@ -604,8 +604,8 @@
 			<Command control="stopAll" command.category="Launcher" command.name="Stop All"/>
 			<Command control="transportStart" command.category="Transport" command.name="Start"/>
 			<Command control="transportStop"  command.category="Transport" command.name="Stop"/>
-			<!-- Program Change -> jump the launcher to an absolute scene bank. -->
-			<foreach variable="$i" count="16">
+			<!-- Program Change -> jump the launcher to an absolute scene. -->
+			<foreach variable="$i" count="128">
 				<Invoke control="jumpPC[$i]" onReceive="onLauncherJumpScene($i)"/>
 			</foreach>
 		</Global>

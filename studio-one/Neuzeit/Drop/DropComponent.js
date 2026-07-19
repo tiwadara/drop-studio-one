@@ -125,8 +125,9 @@ class DropComponent extends PreSonus.ControlSurfaceComponent {
     }
 }
 
-// Scenes to jump per Program-Change step. 4 = whole grid (bank) jump; 1 = per-scene.
-DropComponent.kRowsPerJump = 4;
+// Scenes to jump per Program-Change step. 1 = program N lands on scene N (direct);
+// 4 = whole grid (bank) jump per program step.
+DropComponent.kRowsPerJump = 1;
 
 function createDropComponentInstance() {
     return new DropComponent;
