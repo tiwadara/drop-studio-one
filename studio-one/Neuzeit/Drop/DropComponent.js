@@ -40,7 +40,7 @@ class DropComponent extends PreSonus.ControlSurfaceComponent {
         c.addNullHandler();                                          // mode 0 = kNone
         c.addHandlerForRole(PreSonus.PadSectionRole.kLauncherInput); // mode 1 = kLauncher
         this.launcherHandler = c.getHandler(PadMode.kLauncher);
-        this.launcherHandler.setMappingMode(PreSonus.PadSectionLauncherMode.kScenesOnly);
+        this.launcherHandler.setMappingMode(PreSonus.PadSectionLauncherMode.kCellsOnly);
         c.setActiveHandler(PadMode.kLauncher);
         this.gridComponent = c;
 
@@ -51,7 +51,7 @@ class DropComponent extends PreSonus.ControlSurfaceComponent {
             s.addNullHandler();
             s.addHandlerForRole(PreSonus.PadSectionRole.kLauncherInput);
             this.sceneHandler = s.getHandler(PadMode.kLauncher);
-            this.sceneHandler.setMappingMode(PreSonus.PadSectionLauncherMode.kScenesOnly);
+            this.sceneHandler.setMappingMode(PreSonus.PadSectionLauncherMode.kCellsOnly);
             s.setActiveHandler(PadMode.kLauncher);
         }
     }

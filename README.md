@@ -4,7 +4,7 @@ An unofficial [PreSonus Studio One](https://www.presonus.com/products/studio-one
 
 It turns the Drop into a **Launcher + mixer surface**:
 
-- **4×4 pad grid → scene launch** (each pad fires a Launcher scene), with LED colour/state feedback
+- **4×4 pad grid → clip launch** (each pad fires one Launcher clip), with LED colour/state feedback
 - **8 faders → channel volume**
 - **32 encoders → 3 sends per channel** (top encoder row left free)
 - **8 mute buttons → channel mute**
@@ -55,9 +55,9 @@ Key points:
 
 | Drop control | MIDI | Studio One target |
 |---|---|---|
-| 4×4 grid (top-left first) | ch16 notes 88–103 | Launcher **scene launch** (`kScenesOnly`) |
-| Session ◀ ▲ ▼ ▶ | ch16 notes 84–87 | move the focus box by **1** |
-| Bottom pad row ◀ ▲ ▼ ▶ | ch16 notes 104–107 | **page** the focus box by **4** |
+| 4×4 grid (bottom-left first) | ch16 notes 88–103 | Launcher **clip launch** (`kCellsOnly`) |
+| Blue buttons ◀ ▲ ▼ ▶ | ch16 notes 84–87 | move the focus box — **⚠ does not dispatch on user devices** ([#2](../../issues/2)) |
+| Bottom row | ch16 notes 104–107 | launcher **stop** modifier — same dispatch caveat |
 | Stop-All | ch16 note 127 | Launcher *Stop All* |
 | Faders (8 layers A–H) | ch 1/3/5/7 CC | channel **volume**, mixer **ch 1–64** (Layer A→1–8 … H→57–64) |
 | Mutes (8 layers A–H) | ch 2/4/6/8 | channel **mute**, ch 1–64 |
@@ -92,7 +92,7 @@ Copy the device folder into your user devices directory:
 1. **Studio One ▸ Settings ▸ External Devices ▸ Add…**
 2. Pick **Neuzeit Instruments ▸ Drop**.
 3. Set **Receive From** and **Send To** to the Drop's MIDI port.
-4. Open the **Launcher** view — the 4×4 grid should light up and launch scenes.
+4. Open the **Launcher** view — the 4×4 grid should light up and launch clips.
 
 ### 4. Assign the encoder pushes
 The 32 pushes are `public` controls. Map each one with **Control Link**: focus the target parameter, engage mapping, tap the push.

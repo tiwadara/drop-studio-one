@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Neuzeit Instruments "Drop" - launcher + page nav + 64-ch mixer (8 layers, latching mutes + LED) + knobs + pushes. -->
+<!-- Neuzeit Drop - clip launcher (bottom-first rows) + nav + stop + 64-ch mixer + knobs + pushes. -->
 <ControlSurface>
 	<Controls>
-		<!-- 4x4 clip/scene grid (ch16 notes 88-103), pad[0]=TOP-left -->
-		<Control name="pad[0]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="88"/></Control>
-		<Control name="pad[1]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="89"/></Control>
-		<Control name="pad[2]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="90"/></Control>
-		<Control name="pad[3]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="91"/></Control>
-		<Control name="pad[4]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="92"/></Control>
-		<Control name="pad[5]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="93"/></Control>
-		<Control name="pad[6]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="94"/></Control>
-		<Control name="pad[7]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="95"/></Control>
-		<Control name="pad[8]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="96"/></Control>
-		<Control name="pad[9]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="97"/></Control>
-		<Control name="pad[10]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="98"/></Control>
-		<Control name="pad[11]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="99"/></Control>
-		<Control name="pad[12]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="100"/></Control>
-		<Control name="pad[13]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="101"/></Control>
-		<Control name="pad[14]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="102"/></Control>
-		<Control name="pad[15]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="103"/></Control>
+		<!-- 4x4 clip grid (ch16 notes), pad[0]=BOTTOM-left for kCellsOnly orientation -->
+		<Control name="pad[0]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="100"/></Control>
+		<Control name="pad[1]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="101"/></Control>
+		<Control name="pad[2]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="102"/></Control>
+		<Control name="pad[3]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="103"/></Control>
+		<Control name="pad[4]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="96"/></Control>
+		<Control name="pad[5]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="97"/></Control>
+		<Control name="pad[6]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="98"/></Control>
+		<Control name="pad[7]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="99"/></Control>
+		<Control name="pad[8]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="92"/></Control>
+		<Control name="pad[9]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="93"/></Control>
+		<Control name="pad[10]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="94"/></Control>
+		<Control name="pad[11]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="95"/></Control>
+		<Control name="pad[12]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="88"/></Control>
+		<Control name="pad[13]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="89"/></Control>
+		<Control name="pad[14]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="90"/></Control>
+		<Control name="pad[15]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="91"/></Control>
 		<Control name="padLEDState[0]" options="transmit fastupdate"/>
 		<Control name="padLEDState[1]" options="transmit fastupdate"/>
 		<Control name="padLEDState[2]" options="transmit fastupdate"/>
@@ -67,18 +67,18 @@
 		<Control name="padLEDColor[13]" type="rgb" options="transmit fastupdate"/>
 		<Control name="padLEDColor[14]" type="rgb" options="transmit fastupdate"/>
 		<Control name="padLEDColor[15]" type="rgb" options="transmit fastupdate"/>
-		<!-- Session nav (step) + stop-all (ch16) -->
+		<!-- Blue buttons (ch16 84-87) -> move the grid -->
 		<Control name="navLeft" type="button" options="receive"><MidiMessage status="#9F" address="84"/></Control>
 		<Control name="navUp" type="button" options="receive"><MidiMessage status="#9F" address="85"/></Control>
 		<Control name="navDown" type="button" options="receive"><MidiMessage status="#9F" address="86"/></Control>
 		<Control name="navRight" type="button" options="receive"><MidiMessage status="#9F" address="87"/></Control>
+		<!-- Bottom cells (ch16 104-107) -> launcher stop modifier -->
+		<Control name="trackStop[0]" type="button" options="receive"><MidiMessage status="#9F" address="104"/></Control>
+		<Control name="trackStop[1]" type="button" options="receive"><MidiMessage status="#9F" address="105"/></Control>
+		<Control name="trackStop[2]" type="button" options="receive"><MidiMessage status="#9F" address="106"/></Control>
+		<Control name="trackStop[3]" type="button" options="receive"><MidiMessage status="#9F" address="107"/></Control>
 		<Control name="stopAll" type="button" options="receive"><MidiMessage status="#9F" address="127"/></Control>
-		<!-- Bottom pad row (ch16 104-107) -> launcher PAGE control (jump 4) -->
-		<Control name="pageUp" type="button" options="receive"><MidiMessage status="#9F" address="104"/></Control>
-		<Control name="pageDown" type="button" options="receive"><MidiMessage status="#9F" address="105"/></Control>
-		<Control name="pageLeft" type="button" options="receive"><MidiMessage status="#9F" address="106"/></Control>
-		<Control name="pageRight" type="button" options="receive"><MidiMessage status="#9F" address="107"/></Control>
-		<!-- 64 faders: 8 layers A-H (ch 1/3/5/7) -> mixer ch 1-64 -->
+		<!-- 64 faders (receive+transmit) -->
 		<Control name="fader[0]" title="Fader A1" type="fader" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#2C"/></Control>
 		<Control name="fader[1]" title="Fader A2" type="fader" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#2D"/></Control>
 		<Control name="fader[2]" title="Fader A3" type="fader" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#2E"/></Control>
@@ -143,7 +143,7 @@
 		<Control name="fader[61]" title="Fader H6" type="fader" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#63"/></Control>
 		<Control name="fader[62]" title="Fader H7" type="fader" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#64"/></Control>
 		<Control name="fader[63]" title="Fader H8" type="fader" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#65"/></Control>
-		<!-- 64 mute BUTTONS (trigger, receive-only): fire once per press -> latch a toggle -->
+		<!-- 64 mute buttons + 64 mute LEDs -->
 		<Control name="muteBtn[0]" title="Mute A1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#23"/></Control>
 		<Control name="muteBtn[1]" title="Mute A2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#24"/></Control>
 		<Control name="muteBtn[2]" title="Mute A3" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#25"/></Control>
@@ -208,7 +208,6 @@
 		<Control name="muteBtn[61]" title="Mute H6" type="trigger" options="receive public"><MidiMessage status="#90" channel="#07" address="#59"/></Control>
 		<Control name="muteBtn[62]" title="Mute H7" type="trigger" options="receive public"><MidiMessage status="#90" channel="#07" address="#5A"/></Control>
 		<Control name="muteBtn[63]" title="Mute H8" type="trigger" options="receive public"><MidiMessage status="#90" channel="#07" address="#5B"/></Control>
-		<!-- 64 mute LEDs (transmit-only): send mute state back to light the button -->
 		<Control name="muteLED[0]" options="transmit"><MidiMessage status="#90" channel="#01" address="#23"/></Control>
 		<Control name="muteLED[1]" options="transmit"><MidiMessage status="#90" channel="#01" address="#24"/></Control>
 		<Control name="muteLED[2]" options="transmit"><MidiMessage status="#90" channel="#01" address="#25"/></Control>
@@ -273,7 +272,7 @@
 		<Control name="muteLED[61]" options="transmit"><MidiMessage status="#90" channel="#07" address="#59"/></Control>
 		<Control name="muteLED[62]" options="transmit"><MidiMessage status="#90" channel="#07" address="#5A"/></Control>
 		<Control name="muteLED[63]" options="transmit"><MidiMessage status="#90" channel="#07" address="#5B"/></Control>
-		<!-- 32 encoders (rows 1-4) ch1: public + unmapped -> Control Link to plugins -->
+		<!-- 32 encoders (receive+transmit) -->
 		<Control name="knob[0]" title="Knob 1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#01"/></Control>
 		<Control name="knob[1]" title="Knob 2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#02"/></Control>
 		<Control name="knob[2]" title="Knob 3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#03"/></Control>
@@ -306,7 +305,7 @@
 		<Control name="knob[29]" title="Knob 30" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#1F"/></Control>
 		<Control name="knob[30]" title="Knob 31" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#21"/></Control>
 		<Control name="knob[31]" title="Knob 32" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#22"/></Control>
-		<!-- Encoder-push buttons (momentary), ch2 notes = encoder CC -->
+		<!-- Encoder-push buttons (ch2 notes) -->
 		<Control name="push[0][0]" title="Push 1-1" type="button" options="receive public"><MidiMessage status="#90" channel="#01" address="#01"/></Control>
 		<Control name="push[0][1]" title="Push 1-2" type="button" options="receive public"><MidiMessage status="#90" channel="#01" address="#0A"/></Control>
 		<Control name="push[0][2]" title="Push 1-3" type="button" options="receive public"><MidiMessage status="#90" channel="#01" address="#12"/></Control>
@@ -359,14 +358,13 @@
 			<Invoke control="navDown" onReceive="onLauncherNavigateDown"/>
 			<Invoke control="navLeft" onReceive="onLauncherNavigateLeft"/>
 			<Invoke control="navRight" onReceive="onLauncherNavigateRight"/>
-			<Invoke control="pageUp" onReceive="onLauncherPageUp"/>
-			<Invoke control="pageDown" onReceive="onLauncherPageDown"/>
-			<Invoke control="pageLeft" onReceive="onLauncherPageLeft"/>
-			<Invoke control="pageRight" onReceive="onLauncherPageRight"/>
+			<Value control="trackStop[0]" param="stopModifier"/>
+			<Value control="trackStop[1]" param="stopModifier"/>
+			<Value control="trackStop[2]" param="stopModifier"/>
+			<Value control="trackStop[3]" param="stopModifier"/>
 			<Command control="stopAll" command.category="Launcher" command.name="Stop All"/>
 		</Global>
 
-		<!-- 64-channel mixer: faders->volume; mute = trigger toggles mute (latches), LED shows state -->
 		<DeviceMapping device="MixerConsole" name="MixerMapping">
 			<PlacementBank target="RemoteBank" pagesize="64" name="ChannelBankElement">
 				<foreach variable="$ch" count="64">
