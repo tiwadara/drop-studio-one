@@ -68,16 +68,16 @@
 		<Control name="padLEDColor[14]" type="rgb" options="transmit fastupdate"/>
 		<Control name="padLEDColor[15]" type="rgb" options="transmit fastupdate"/>
 		<!-- Blue buttons (ch16 84-87) -> move the grid -->
-		<Control name="navLeft" type="button" options="receive"><MidiMessage status="#9F" address="84"/></Control>
-		<Control name="navUp" type="button" options="receive"><MidiMessage status="#9F" address="85"/></Control>
-		<Control name="navDown" type="button" options="receive"><MidiMessage status="#9F" address="86"/></Control>
-		<Control name="navRight" type="button" options="receive"><MidiMessage status="#9F" address="87"/></Control>
+		<Control name="navLeft" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#54"/></Control>
+		<Control name="navUp" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#55"/></Control>
+		<Control name="navDown" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#56"/></Control>
+		<Control name="navRight" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#57"/></Control>
 		<!-- Bottom cells (ch16 104-107) -> launcher stop modifier -->
-		<Control name="trackStop[0]" type="button" options="receive"><MidiMessage status="#9F" address="104"/></Control>
-		<Control name="trackStop[1]" type="button" options="receive"><MidiMessage status="#9F" address="105"/></Control>
-		<Control name="trackStop[2]" type="button" options="receive"><MidiMessage status="#9F" address="106"/></Control>
-		<Control name="trackStop[3]" type="button" options="receive"><MidiMessage status="#9F" address="107"/></Control>
-		<Control name="stopAll" type="button" options="receive"><MidiMessage status="#9F" address="127"/></Control>
+		<Control name="trackStop[0]" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#68"/></Control>
+		<Control name="trackStop[1]" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#69"/></Control>
+		<Control name="trackStop[2]" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#6A"/></Control>
+		<Control name="trackStop[3]" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#6B"/></Control>
+		<Control name="stopAll" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#7F"/></Control>
 		<!-- 64 faders (receive+transmit) -->
 		<Control name="fader[0]" title="Fader A1" type="fader" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#2C"/></Control>
 		<Control name="fader[1]" title="Fader A2" type="fader" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#2D"/></Control>

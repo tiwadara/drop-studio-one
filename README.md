@@ -56,8 +56,8 @@ Key points:
 | Drop control | MIDI | Studio One target |
 |---|---|---|
 | 4×4 grid (bottom-left first) | ch16 notes 88–103 | Launcher **clip launch** (`kCellsOnly`) |
-| Blue buttons ◀ ▲ ▼ ▶ | ch16 notes 84–87 | move the focus box — **⚠ does not dispatch on user devices** ([#2](../../issues/2)) |
-| Bottom row | ch16 notes 104–107 | launcher **stop** modifier — same dispatch caveat |
+| Blue buttons ◀ ▲ ▼ ▶ | ch16 notes 84–87 | move the launcher focus box (nav) ✅ |
+| Bottom row | ch16 notes 104–107 | launcher **stop** modifier (hold + tap a column to stop) |
 | Stop-All | ch16 note 127 | Launcher *Stop All* |
 | Faders (8 layers A–H) | ch 1/3/5/7 CC | channel **volume**, mixer **ch 1–64** (Layer A→1–8 … H→57–64) |
 | Mutes (8 layers A–H) | ch 2/4/6/8 | channel **mute**, ch 1–64 |
@@ -116,6 +116,7 @@ See issues [#2](../../issues/2) and [#3](../../issues/3) for the full write-up a
 
 - **Transport:** not mapped — see "Sync & transport" above.
 - **Mute message type:** mutes are wired as **notes** on ch2. If they don't toggle, your unit may send them as CC — change `status="#90"` to `status="#B0"` on the `mute[...]` controls in `Drop.surface.xml`.
+- **Note-control format matters:** declare note controls as `status="#90" channel="#0F"` (base note-on + channel attr) with a **hex** address — the channel-in-status form `status="#9F"` silently fails to register (Studio One logs `Control "navUp" not found`), which breaks any Invoke/Command referencing it. This was the cause of the earlier "nav/Stop-All don't work" — they work fine once declared correctly.
 - **Don't edit the device in Studio One's built-in device *editor*** — it rewrites the file and strips hand-authored controls. Assign ports in External Devices only.
 - **Pad colours** use an approximate 14-colour palette in `DropProtocol.js` (`kDropColors`) — tune to taste.
 - **Image:** ships an AI-generated device render (`Drop.png`, no watermark). Swap in your own image and update `imageFile` in `Drop.device` if you prefer.
