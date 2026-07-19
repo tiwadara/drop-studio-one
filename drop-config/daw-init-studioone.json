@@ -9288,7 +9288,7 @@
      "ch": 1,
      "csvRef": 0,
      "msgNr": 44.0,
-     "maxOut": 12384,
+     "maxOut": 16383,
      "minOut": 0,
      "curveId": 0
     }
