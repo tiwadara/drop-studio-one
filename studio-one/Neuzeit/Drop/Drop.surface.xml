@@ -98,9 +98,134 @@
 		     so the host's normal control-matching fires it - same path as the physical scene row.
 		     type="trigger" = one-shot per message (re-triggerable), the shipped FCB1010 PC pattern.
 		     128 = full PC range 0..127. -->
-		<foreach variable="$i" count="128">
-			<Control name="sceneLaunchPad[$i]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="$i"/></Control>
-		</foreach>
+		<Control name="sceneLaunchPad[0]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="0"/></Control>
+		<Control name="sceneLaunchPad[1]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="1"/></Control>
+		<Control name="sceneLaunchPad[2]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="2"/></Control>
+		<Control name="sceneLaunchPad[3]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="3"/></Control>
+		<Control name="sceneLaunchPad[4]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="4"/></Control>
+		<Control name="sceneLaunchPad[5]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="5"/></Control>
+		<Control name="sceneLaunchPad[6]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="6"/></Control>
+		<Control name="sceneLaunchPad[7]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="7"/></Control>
+		<Control name="sceneLaunchPad[8]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="8"/></Control>
+		<Control name="sceneLaunchPad[9]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="9"/></Control>
+		<Control name="sceneLaunchPad[10]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="10"/></Control>
+		<Control name="sceneLaunchPad[11]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="11"/></Control>
+		<Control name="sceneLaunchPad[12]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="12"/></Control>
+		<Control name="sceneLaunchPad[13]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="13"/></Control>
+		<Control name="sceneLaunchPad[14]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="14"/></Control>
+		<Control name="sceneLaunchPad[15]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="15"/></Control>
+		<Control name="sceneLaunchPad[16]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="16"/></Control>
+		<Control name="sceneLaunchPad[17]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="17"/></Control>
+		<Control name="sceneLaunchPad[18]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="18"/></Control>
+		<Control name="sceneLaunchPad[19]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="19"/></Control>
+		<Control name="sceneLaunchPad[20]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="20"/></Control>
+		<Control name="sceneLaunchPad[21]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="21"/></Control>
+		<Control name="sceneLaunchPad[22]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="22"/></Control>
+		<Control name="sceneLaunchPad[23]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="23"/></Control>
+		<Control name="sceneLaunchPad[24]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="24"/></Control>
+		<Control name="sceneLaunchPad[25]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="25"/></Control>
+		<Control name="sceneLaunchPad[26]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="26"/></Control>
+		<Control name="sceneLaunchPad[27]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="27"/></Control>
+		<Control name="sceneLaunchPad[28]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="28"/></Control>
+		<Control name="sceneLaunchPad[29]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="29"/></Control>
+		<Control name="sceneLaunchPad[30]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="30"/></Control>
+		<Control name="sceneLaunchPad[31]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="31"/></Control>
+		<Control name="sceneLaunchPad[32]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="32"/></Control>
+		<Control name="sceneLaunchPad[33]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="33"/></Control>
+		<Control name="sceneLaunchPad[34]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="34"/></Control>
+		<Control name="sceneLaunchPad[35]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="35"/></Control>
+		<Control name="sceneLaunchPad[36]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="36"/></Control>
+		<Control name="sceneLaunchPad[37]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="37"/></Control>
+		<Control name="sceneLaunchPad[38]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="38"/></Control>
+		<Control name="sceneLaunchPad[39]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="39"/></Control>
+		<Control name="sceneLaunchPad[40]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="40"/></Control>
+		<Control name="sceneLaunchPad[41]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="41"/></Control>
+		<Control name="sceneLaunchPad[42]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="42"/></Control>
+		<Control name="sceneLaunchPad[43]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="43"/></Control>
+		<Control name="sceneLaunchPad[44]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="44"/></Control>
+		<Control name="sceneLaunchPad[45]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="45"/></Control>
+		<Control name="sceneLaunchPad[46]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="46"/></Control>
+		<Control name="sceneLaunchPad[47]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="47"/></Control>
+		<Control name="sceneLaunchPad[48]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="48"/></Control>
+		<Control name="sceneLaunchPad[49]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="49"/></Control>
+		<Control name="sceneLaunchPad[50]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="50"/></Control>
+		<Control name="sceneLaunchPad[51]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="51"/></Control>
+		<Control name="sceneLaunchPad[52]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="52"/></Control>
+		<Control name="sceneLaunchPad[53]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="53"/></Control>
+		<Control name="sceneLaunchPad[54]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="54"/></Control>
+		<Control name="sceneLaunchPad[55]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="55"/></Control>
+		<Control name="sceneLaunchPad[56]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="56"/></Control>
+		<Control name="sceneLaunchPad[57]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="57"/></Control>
+		<Control name="sceneLaunchPad[58]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="58"/></Control>
+		<Control name="sceneLaunchPad[59]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="59"/></Control>
+		<Control name="sceneLaunchPad[60]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="60"/></Control>
+		<Control name="sceneLaunchPad[61]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="61"/></Control>
+		<Control name="sceneLaunchPad[62]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="62"/></Control>
+		<Control name="sceneLaunchPad[63]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="63"/></Control>
+		<Control name="sceneLaunchPad[64]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="64"/></Control>
+		<Control name="sceneLaunchPad[65]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="65"/></Control>
+		<Control name="sceneLaunchPad[66]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="66"/></Control>
+		<Control name="sceneLaunchPad[67]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="67"/></Control>
+		<Control name="sceneLaunchPad[68]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="68"/></Control>
+		<Control name="sceneLaunchPad[69]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="69"/></Control>
+		<Control name="sceneLaunchPad[70]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="70"/></Control>
+		<Control name="sceneLaunchPad[71]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="71"/></Control>
+		<Control name="sceneLaunchPad[72]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="72"/></Control>
+		<Control name="sceneLaunchPad[73]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="73"/></Control>
+		<Control name="sceneLaunchPad[74]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="74"/></Control>
+		<Control name="sceneLaunchPad[75]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="75"/></Control>
+		<Control name="sceneLaunchPad[76]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="76"/></Control>
+		<Control name="sceneLaunchPad[77]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="77"/></Control>
+		<Control name="sceneLaunchPad[78]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="78"/></Control>
+		<Control name="sceneLaunchPad[79]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="79"/></Control>
+		<Control name="sceneLaunchPad[80]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="80"/></Control>
+		<Control name="sceneLaunchPad[81]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="81"/></Control>
+		<Control name="sceneLaunchPad[82]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="82"/></Control>
+		<Control name="sceneLaunchPad[83]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="83"/></Control>
+		<Control name="sceneLaunchPad[84]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="84"/></Control>
+		<Control name="sceneLaunchPad[85]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="85"/></Control>
+		<Control name="sceneLaunchPad[86]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="86"/></Control>
+		<Control name="sceneLaunchPad[87]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="87"/></Control>
+		<Control name="sceneLaunchPad[88]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="88"/></Control>
+		<Control name="sceneLaunchPad[89]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="89"/></Control>
+		<Control name="sceneLaunchPad[90]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="90"/></Control>
+		<Control name="sceneLaunchPad[91]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="91"/></Control>
+		<Control name="sceneLaunchPad[92]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="92"/></Control>
+		<Control name="sceneLaunchPad[93]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="93"/></Control>
+		<Control name="sceneLaunchPad[94]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="94"/></Control>
+		<Control name="sceneLaunchPad[95]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="95"/></Control>
+		<Control name="sceneLaunchPad[96]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="96"/></Control>
+		<Control name="sceneLaunchPad[97]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="97"/></Control>
+		<Control name="sceneLaunchPad[98]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="98"/></Control>
+		<Control name="sceneLaunchPad[99]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="99"/></Control>
+		<Control name="sceneLaunchPad[100]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="100"/></Control>
+		<Control name="sceneLaunchPad[101]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="101"/></Control>
+		<Control name="sceneLaunchPad[102]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="102"/></Control>
+		<Control name="sceneLaunchPad[103]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="103"/></Control>
+		<Control name="sceneLaunchPad[104]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="104"/></Control>
+		<Control name="sceneLaunchPad[105]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="105"/></Control>
+		<Control name="sceneLaunchPad[106]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="106"/></Control>
+		<Control name="sceneLaunchPad[107]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="107"/></Control>
+		<Control name="sceneLaunchPad[108]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="108"/></Control>
+		<Control name="sceneLaunchPad[109]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="109"/></Control>
+		<Control name="sceneLaunchPad[110]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="110"/></Control>
+		<Control name="sceneLaunchPad[111]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="111"/></Control>
+		<Control name="sceneLaunchPad[112]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="112"/></Control>
+		<Control name="sceneLaunchPad[113]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="113"/></Control>
+		<Control name="sceneLaunchPad[114]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="114"/></Control>
+		<Control name="sceneLaunchPad[115]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="115"/></Control>
+		<Control name="sceneLaunchPad[116]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="116"/></Control>
+		<Control name="sceneLaunchPad[117]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="117"/></Control>
+		<Control name="sceneLaunchPad[118]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="118"/></Control>
+		<Control name="sceneLaunchPad[119]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="119"/></Control>
+		<Control name="sceneLaunchPad[120]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="120"/></Control>
+		<Control name="sceneLaunchPad[121]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="121"/></Control>
+		<Control name="sceneLaunchPad[122]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="122"/></Control>
+		<Control name="sceneLaunchPad[123]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="123"/></Control>
+		<Control name="sceneLaunchPad[124]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="124"/></Control>
+		<Control name="sceneLaunchPad[125]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="125"/></Control>
+		<Control name="sceneLaunchPad[126]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="126"/></Control>
+		<Control name="sceneLaunchPad[127]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="127"/></Control>
 		<!-- 64 faders -->
 		<Control name="fader[0]" title="Fader A1" type="fader" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#2C"/></Control>
 		<Control name="fader[1]" title="Fader A2" type="fader" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#2D"/></Control>
@@ -602,7 +727,7 @@
 		</PadSection>
 		<!-- Hidden scene-launch grid: pad[i] -> scene i (kScenesOnly, set in DropComponent).
 		     Input-only (no LED). Pressed internally via Program-Change translation. -->
-		<PadSection name="SceneLaunchElement" rows="128" roles="launcherinput">
+		<PadSection name="SceneLaunchElement" rows="1" roles="launcherinput">
 			<foreach variable="$i" count="128"><Pad control="sceneLaunchPad[$i]"/></foreach>
 		</PadSection>
 		<Global>
