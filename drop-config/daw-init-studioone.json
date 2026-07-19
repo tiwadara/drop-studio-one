@@ -10563,6 +10563,17 @@
     "feedbSlotVis": 1,
     "feedbId": 28,
     "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 16,
+     "csvRef": 0,
+     "msgNr": 111.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 0
+    },
     "data": {
      "rotary": {
       "000": 0.0,
@@ -10969,6 +10980,17 @@
     "feedbSlotVis": 1,
     "feedbId": 28,
     "feedbSlot": 1,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 16,
+     "csvRef": 0,
+     "msgNr": 115.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 0
+    },
     "data": {
      "rotary": {
       "000": 0.0,
@@ -11628,6 +11650,17 @@
     "feedbSlotVis": 1,
     "feedbId": 28,
     "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 16,
+     "csvRef": 0,
+     "msgNr": 111.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 0
+    },
     "data": {
      "rotary": {
       "000": 0.0,
@@ -12034,6 +12067,17 @@
     "feedbSlotVis": 1,
     "feedbId": 28,
     "feedbSlot": 1,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 16,
+     "csvRef": 0,
+     "msgNr": 111.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 0
+    },
     "data": {
      "rotary": {
       "000": 0.0,
@@ -12440,6 +12484,17 @@
     "feedbSlotVis": 1,
     "feedbId": 28,
     "feedbSlot": 1,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 16,
+     "csvRef": 0,
+     "msgNr": 111.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 0
+    },
     "data": {
      "rotary": {
       "000": 0.0,

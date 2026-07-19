@@ -5,6 +5,8 @@ An unofficial [PreSonus Studio One](https://www.presonus.com/products/studio-one
 It turns the Drop into a **Launcher + mixer surface**:
 
 - **4×4 pad grid → clip launch** (the grid is a 4-track × 4-scene clip matrix — "grid mode"), with LED colour/state feedback. Whole-scene launch is the Drop's Shift layer.
+- **Scene column (Shift) → scene launch** (ch16 notes 111/115/119/123), with LED feedback
+- **Snapshot recall → scene launch** — recalling a Drop snapshot fires its mapped scene (see [Snapshot → scene](#snapshot--scene))
 - **8 faders → channel volume**
 - **32 encoders → 3 sends per channel** (top encoder row left free)
 - **8 mute buttons → channel mute**
@@ -27,6 +29,7 @@ studio-one/Neuzeit/Drop/     ← the Studio One control-surface device
   Drop.svg  Drop.txt           placeholder image + description
 drop-config/
   daw-init-studioone.json      Drop config prepared for this integration
+  add-snapshot-scene-launch.py  patch snapshots to launch Studio One scenes
 ```
 
 ---
@@ -56,6 +59,8 @@ Key points:
 | Drop control | MIDI | Studio One target |
 |---|---|---|
 | 4×4 grid (top-left first) | ch16 notes 88–103 | Launcher **clip launch** — 4×4 clip cells (`kCellsOnly`) |
+| Scene column (Shift) | ch16 notes 111/115/119/123 | Launcher **scene launch** (`kScenesOnly`) |
+| Snapshot recall | ch16 scene note (via snapshot output slot) | Launcher **scene launch** — see [Snapshot → scene](#snapshot--scene) |
 | Session ◀ ▲ ▼ ▶ | ch16 notes 84–87 | move the focus box by **1** |
 | Bottom pad row ◀ ▲ ▼ ▶ | ch16 notes 104–107 | **page** the focus box by **4** |
 | Stop-All | ch16 note 127 | Launcher *Stop All* |
@@ -67,6 +72,29 @@ Key points:
 The 8 Drop **layers** expand the mixer: each layer sends different CCs on the same 8 physical faders/mutes, so A–H address channels 1–64. No layer-switch handling is needed — every layer's CCs are pre-mapped.
 
 The grid LEDs echo Studio One clip state: velocity = `colorIndex + 2`, `+16` queued, `+64` playing, `1` = empty.
+
+---
+
+## Snapshot → scene
+
+Recalling a Drop **snapshot** can launch a Studio One **scene**. A snapshot has
+its own MIDI output slots that fire *when the snapshot is recalled* (independent
+of the controls it restores). We point slot `0` of each snapshot at a
+scene-launch note (ch16 `111/115/119/123`), which the device maps to the
+Launcher's `SceneSectionElement` — so loading the snapshot launches the scene.
+
+The shipped config already has this wired for its example snapshots. Because you'll
+replace those with your own (in the Drop editor), re-apply the mapping to your
+exported config with the helper script:
+
+```
+python3 drop-config/add-snapshot-scene-launch.py your-config.json
+```
+
+Default rule: each snapshot launches the scene at its own **row** (row 0 → scene 1,
+row 1 → scene 2, …), wrapping past 4. Edit `SCENE_NOTES` / the row rule at the top
+of the script to change the correspondence. The script only touches `map.snp`
+(adds output slot `0`); everything else is left byte-for-byte identical.
 
 ---
 
