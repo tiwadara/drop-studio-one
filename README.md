@@ -99,9 +99,22 @@ The 32 pushes are `public` controls. Map each one with **Control Link**: focus t
 
 ---
 
+## Sync & transport — Studio One is a clock MASTER only
+
+**Studio One 7 cannot slave its transport to external MIDI.** It can *send* MIDI Clock / MMC (master) and can chase **MTC**, but it will **not** follow incoming MIDI beat clock or external **Start/Stop**. The Synchronization page only exposes MTC and MMC *inputs* — there is no "MIDI Clock in", and this is a documented product limitation, not a setting.
+
+So the Drop's **PLAY/STOP emit MIDI clock (Start `0xFA` / Stop `0xFC`)**, which Studio One **receives but ignores** for transport. You'll see the signal in a MIDI monitor, but the transport won't move.
+
+**What this means for the Drop:**
+- **Transport is not mapped.** Start a set by launching a scene; end it by pulling the faders down.
+- **For tempo lock, run it the other way:** make **Studio One the clock master** and set the Drop to **Ext MIDI** clock (enable "Send MIDI Clock" to the Drop's port in Song Setup). The Drop then follows Studio One.
+- Driving Studio One's transport *from* the Drop would require an external translator (Drop clock → Mackie Control / MMC), which is out of scope here.
+
+See issues [#2](../../issues/2) and [#3](../../issues/3) for the full write-up and sources.
+
 ## Known limitations / notes
 
-- **Transport:** the Drop's PLAY/STOP emit MIDI *clock* (Start `0xFA` / Stop `0xFC`), and Studio One won't slave transport to beat clock (only MTC/MMC), while its control-surface `<Command>` dispatch doesn't fire for user devices. So transport isn't mapped — start a set by launching a scene, end it by pulling the faders down. If you want tempo lock, make Studio One the clock master and set the Drop to **Ext MIDI** clock.
+- **Transport:** not mapped — see "Sync & transport" above.
 - **Mute message type:** mutes are wired as **notes** on ch2. If they don't toggle, your unit may send them as CC — change `status="#90"` to `status="#B0"` on the `mute[...]` controls in `Drop.surface.xml`.
 - **Don't edit the device in Studio One's built-in device *editor*** — it rewrites the file and strips hand-authored controls. Assign ports in External Devices only.
 - **Pad colours** use an approximate 14-colour palette in `DropProtocol.js` (`kDropColors`) — tune to taste.
