@@ -69,8 +69,38 @@ class DropMidiDevice extends PreSonus.ControlSurfaceDevice {
         if (state) {
             this.sendLayoutAssert();
             this.sendStaticButtonLEDs();
+            // --- TEMP BRIGHTNESS PROBE ---------------------------------------------------
+            // Flood the whole 4x4 clip grid (notes 92..107) with ONE identical colour so we
+            // can tell whether the bottom row (104..107) is dim because of the Drop firmware
+            // or because of what we normally send it. If the bottom row looks dimmer than the
+            // three rows above under this uniform flood, it's a hardware/firmware zone and no
+            // velocity we send can match it. Set kBrightnessProbe=false to restore live clips.
+            if (DropMidiDevice.kBrightnessProbe) {
+                for (let n = 92; n <= 107; n++)
+                    this.sendMidi(DropProtocol.kNoteOnStatus, n, 6);   // 6 = green, mid palette
+                return;   // skip invalidateAll so the host doesn't overwrite the probe
+            }
             this.hostDevice.invalidateAll();
         }
+    }
+
+    // The surface can't bind MIDI real-time clock (0xFA/0xFB/0xFC) directly (status="#FA"
+    // fails to register). So intercept it here and translate into a note-on that a normal
+    // control catches -> which drives a Transport command.
+    //   Start/Continue -> ch16 note 1   Stop -> ch16 note 2
+    onMidiEvent(status, data1, data2) {
+        if (status === 0xFA || status === 0xFB) {       // Start / Continue
+            this.sendMidi(DropProtocol.kNoteOnStatus, 108, 15);   // DEBUG: light scene-drop pad if we see Start
+            super.onMidiEvent(DropProtocol.kNoteOnStatus, 1, 127);
+            return;
+        }
+        if (status === 0xFC) {                          // Stop
+            this.sendMidi(DropProtocol.kNoteOnStatus, 108, 5);    // DEBUG: dim it if we see Stop
+            super.onMidiEvent(DropProtocol.kNoteOnStatus, 2, 127);
+            return;
+        }
+        if (status === 0xF8) return;                    // ignore clock pulses (flood)
+        super.onMidiEvent(status, data1, data2);
     }
 
     // Map the host's (state, colorIndex, animation) to the Drop's single velocity byte.
@@ -118,6 +148,10 @@ class DropMidiDevice extends PreSonus.ControlSurfaceDevice {
         }
     }
 }
+
+// Diagnostic toggle: true = flood the grid with one colour to test bottom-row brightness.
+// (Parked — the bottom-row brightness question is unresolved but not being probed right now.)
+DropMidiDevice.kBrightnessProbe = false;
 
 function createDropDeviceInstance() {
     return new DropMidiDevice();

@@ -47,10 +47,10 @@ DropProtocol.kLayoutVelocity   = 100;
 // MUST match the pad[i] note order in Drop.surface.xml so LED feedback lands on the pressed pad.
 // (kScenesOnly wanted the opposite, top-first order — the two modes differ.)
 DropProtocol.kPadNotes = [
-    100, 101, 102, 103,   // pad[0..3]   -> bottom physical row
-     96,  97,  98,  99,   // pad[4..7]
-     92,  93,  94,  95,   // pad[8..11]
-     88,  89,  90,  91    // pad[12..15] -> top physical row
+    104, 105, 106, 107,
+    100, 101, 102, 103,
+     96,  97,  98,  99,
+     92,  93,  94,  95
 ];
 
 // --- Non-grid buttons (all channel 16 notes) -----------------------------------------------
@@ -60,7 +60,7 @@ DropProtocol.kSessionDown      = 86;   // SESSIONDOWN
 DropProtocol.kSessionRight     = 87;   // SESSIONRIGHT
 DropProtocol.kQuant            = 83;   // QUANT
 DropProtocol.kStopAllClips     = 127;  // STOPALLCLIPS (NM+39)
-DropProtocol.kSceneLaunch      = [111, 115, 119, 123]; // NM+23,27,31,35 (right column)
+DropProtocol.kSceneLaunch      = [88, 89, 90, 91]; // NM+23,27,31,35 (right column)
 DropProtocol.kSceneDrop        = [108, 112, 116, 120]; // NM+20,24,28,32
 DropProtocol.kTrackStop        = [104, 105, 106, 107];  // NM+16..19 (per-column stop)
 

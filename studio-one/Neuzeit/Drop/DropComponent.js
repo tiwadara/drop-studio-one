@@ -51,7 +51,7 @@ class DropComponent extends PreSonus.ControlSurfaceComponent {
             s.addNullHandler();
             s.addHandlerForRole(PreSonus.PadSectionRole.kLauncherInput);
             this.sceneHandler = s.getHandler(PadMode.kLauncher);
-            this.sceneHandler.setMappingMode(PreSonus.PadSectionLauncherMode.kCellsOnly);
+            this.sceneHandler.setMappingMode(PreSonus.PadSectionLauncherMode.kScenesOnly);
             s.setActiveHandler(PadMode.kLauncher);
         }
     }
@@ -94,6 +94,18 @@ class DropComponent extends PreSonus.ControlSurfaceComponent {
         this.launcherHandler.setColumnOffset(this.launcherHandler.getColumnOffset() + 1);
     }
 
+    // --- Absolute scene/bank jump (Drop Program Change) ------------------------------------
+    // A PC message (one per program number, bound in the surface) jumps the launcher viewport
+    // to an ABSOLUTE bank: program N -> scene row N * kRowsPerJump. Set kRowsPerJump = 1 for
+    // per-scene granularity, or 4 (grid height) for whole-page/bank jumps.
+    onLauncherJumpScene(index) {
+        if (!this.launcherHandler) return;
+        let rows = DropComponent.kRowsPerJump;
+        this.launcherHandler.setRowOffset(index * rows);
+        if (this.sceneHandler)
+            this.sceneHandler.setRowOffset(index * rows);
+    }
+
     // --- Launcher PAGE navigation (bottom pad row) - jump by a full grid (4) ----------------
     onLauncherPageUp(state) {
         if (!state || !this.launcherHandler) return;
@@ -112,6 +124,9 @@ class DropComponent extends PreSonus.ControlSurfaceComponent {
         this.launcherHandler.setColumnOffset(this.launcherHandler.getColumnOffset() + 4);
     }
 }
+
+// Scenes to jump per Program-Change step. 4 = whole grid (bank) jump; 1 = per-scene.
+DropComponent.kRowsPerJump = 4;
 
 function createDropComponentInstance() {
     return new DropComponent;

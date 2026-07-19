@@ -1,24 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Neuzeit Drop - clip launcher (bottom-first rows) + nav + stop + 64-ch mixer + knobs + pushes. -->
+<!-- Neuzeit Drop - scene row + clip grid + mixer + 256 assignable knobs (8 layers) + pushes. -->
 <ControlSurface>
 	<Controls>
-		<!-- 4x4 clip grid (ch16 notes), pad[0]=BOTTOM-left for kCellsOnly orientation -->
-		<Control name="pad[0]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="100"/></Control>
-		<Control name="pad[1]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="101"/></Control>
-		<Control name="pad[2]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="102"/></Control>
-		<Control name="pad[3]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="103"/></Control>
-		<Control name="pad[4]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="96"/></Control>
-		<Control name="pad[5]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="97"/></Control>
-		<Control name="pad[6]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="98"/></Control>
-		<Control name="pad[7]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="99"/></Control>
-		<Control name="pad[8]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="92"/></Control>
-		<Control name="pad[9]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="93"/></Control>
-		<Control name="pad[10]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="94"/></Control>
-		<Control name="pad[11]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="95"/></Control>
-		<Control name="pad[12]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="88"/></Control>
-		<Control name="pad[13]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="89"/></Control>
-		<Control name="pad[14]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="90"/></Control>
-		<Control name="pad[15]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="91"/></Control>
+		<!-- Top row (ch16 88-91) -> SCENE launch -->
+		<Control name="scenePad[0]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="88"/></Control>
+		<Control name="scenePad[1]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="89"/></Control>
+		<Control name="scenePad[2]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="90"/></Control>
+		<Control name="scenePad[3]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="91"/></Control>
+		<Control name="sceneLEDState[0]" options="transmit fastupdate"/>
+		<Control name="sceneLEDState[1]" options="transmit fastupdate"/>
+		<Control name="sceneLEDState[2]" options="transmit fastupdate"/>
+		<Control name="sceneLEDState[3]" options="transmit fastupdate"/>
+		<Control name="sceneLEDAnimation[0]" options="transmit fastupdate"/>
+		<Control name="sceneLEDAnimation[1]" options="transmit fastupdate"/>
+		<Control name="sceneLEDAnimation[2]" options="transmit fastupdate"/>
+		<Control name="sceneLEDAnimation[3]" options="transmit fastupdate"/>
+		<Control name="sceneLEDColor[0]" type="rgb" options="transmit fastupdate"/>
+		<Control name="sceneLEDColor[1]" type="rgb" options="transmit fastupdate"/>
+		<Control name="sceneLEDColor[2]" type="rgb" options="transmit fastupdate"/>
+		<Control name="sceneLEDColor[3]" type="rgb" options="transmit fastupdate"/>
+		<!-- 4x4 clip grid (ch16 92-107), pad[0]=bottom-left -->
+		<Control name="pad[0]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="104"/></Control>
+		<Control name="pad[1]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="105"/></Control>
+		<Control name="pad[2]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="106"/></Control>
+		<Control name="pad[3]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="107"/></Control>
+		<Control name="pad[4]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="100"/></Control>
+		<Control name="pad[5]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="101"/></Control>
+		<Control name="pad[6]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="102"/></Control>
+		<Control name="pad[7]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="103"/></Control>
+		<Control name="pad[8]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="96"/></Control>
+		<Control name="pad[9]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="97"/></Control>
+		<Control name="pad[10]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="98"/></Control>
+		<Control name="pad[11]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="99"/></Control>
+		<Control name="pad[12]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="92"/></Control>
+		<Control name="pad[13]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="93"/></Control>
+		<Control name="pad[14]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="94"/></Control>
+		<Control name="pad[15]" type="trigger" options="receive"><MidiMessage status="NoteTrigger" address="95"/></Control>
 		<Control name="padLEDState[0]" options="transmit fastupdate"/>
 		<Control name="padLEDState[1]" options="transmit fastupdate"/>
 		<Control name="padLEDState[2]" options="transmit fastupdate"/>
@@ -67,18 +84,20 @@
 		<Control name="padLEDColor[13]" type="rgb" options="transmit fastupdate"/>
 		<Control name="padLEDColor[14]" type="rgb" options="transmit fastupdate"/>
 		<Control name="padLEDColor[15]" type="rgb" options="transmit fastupdate"/>
-		<!-- Blue buttons (ch16 84-87) -> move the grid -->
+		<!-- nav + stop-all + transport -->
 		<Control name="navLeft" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#54"/></Control>
 		<Control name="navUp" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#55"/></Control>
 		<Control name="navDown" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#56"/></Control>
 		<Control name="navRight" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#57"/></Control>
-		<!-- Bottom cells (ch16 104-107) -> launcher stop modifier -->
-		<Control name="trackStop[0]" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#68"/></Control>
-		<Control name="trackStop[1]" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#69"/></Control>
-		<Control name="trackStop[2]" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#6A"/></Control>
-		<Control name="trackStop[3]" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#6B"/></Control>
 		<Control name="stopAll" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#7F"/></Control>
-		<!-- 64 faders (receive+transmit) -->
+		<Control name="transportStart" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#01"/></Control>
+		<Control name="transportStop"  type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#02"/></Control>
+		<!-- Program Change (Drop jump/snapshot) -> launcher scene/bank jump. ch13 = channel #0C.
+		     One control per program number 0..15 (program = address), FCB1010 pattern. -->
+		<foreach variable="$i" count="16">
+			<Control name="jumpPC[$i]" type="button" options="receive"><MidiMessage status="#C0" channel="#0C" address="$i"/></Control>
+		</foreach>
+		<!-- 64 faders -->
 		<Control name="fader[0]" title="Fader A1" type="fader" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#2C"/></Control>
 		<Control name="fader[1]" title="Fader A2" type="fader" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#2D"/></Control>
 		<Control name="fader[2]" title="Fader A3" type="fader" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#2E"/></Control>
@@ -143,7 +162,7 @@
 		<Control name="fader[61]" title="Fader H6" type="fader" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#63"/></Control>
 		<Control name="fader[62]" title="Fader H7" type="fader" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#64"/></Control>
 		<Control name="fader[63]" title="Fader H8" type="fader" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#65"/></Control>
-		<!-- 64 mute buttons + 64 mute LEDs -->
+		<!-- 64 mute buttons + LEDs -->
 		<Control name="muteBtn[0]" title="Mute A1" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#23"/></Control>
 		<Control name="muteBtn[1]" title="Mute A2" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#24"/></Control>
 		<Control name="muteBtn[2]" title="Mute A3" type="trigger" options="receive public"><MidiMessage status="#90" channel="#01" address="#25"/></Control>
@@ -272,40 +291,264 @@
 		<Control name="muteLED[61]" options="transmit"><MidiMessage status="#90" channel="#07" address="#59"/></Control>
 		<Control name="muteLED[62]" options="transmit"><MidiMessage status="#90" channel="#07" address="#5A"/></Control>
 		<Control name="muteLED[63]" options="transmit"><MidiMessage status="#90" channel="#07" address="#5B"/></Control>
-		<!-- 32 encoders (receive+transmit) -->
-		<Control name="knob[0]" title="Knob 1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#01"/></Control>
-		<Control name="knob[1]" title="Knob 2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#02"/></Control>
-		<Control name="knob[2]" title="Knob 3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#03"/></Control>
-		<Control name="knob[3]" title="Knob 4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#04"/></Control>
-		<Control name="knob[4]" title="Knob 5" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#05"/></Control>
-		<Control name="knob[5]" title="Knob 6" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#07"/></Control>
-		<Control name="knob[6]" title="Knob 7" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#08"/></Control>
-		<Control name="knob[7]" title="Knob 8" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#09"/></Control>
-		<Control name="knob[8]" title="Knob 9" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#0A"/></Control>
-		<Control name="knob[9]" title="Knob 10" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#0B"/></Control>
-		<Control name="knob[10]" title="Knob 11" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#0C"/></Control>
-		<Control name="knob[11]" title="Knob 12" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#0D"/></Control>
-		<Control name="knob[12]" title="Knob 13" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#0E"/></Control>
-		<Control name="knob[13]" title="Knob 14" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#0F"/></Control>
-		<Control name="knob[14]" title="Knob 15" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#10"/></Control>
-		<Control name="knob[15]" title="Knob 16" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#11"/></Control>
-		<Control name="knob[16]" title="Knob 17" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#12"/></Control>
-		<Control name="knob[17]" title="Knob 18" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#13"/></Control>
-		<Control name="knob[18]" title="Knob 19" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#14"/></Control>
-		<Control name="knob[19]" title="Knob 20" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#15"/></Control>
-		<Control name="knob[20]" title="Knob 21" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#16"/></Control>
-		<Control name="knob[21]" title="Knob 22" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#17"/></Control>
-		<Control name="knob[22]" title="Knob 23" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#18"/></Control>
-		<Control name="knob[23]" title="Knob 24" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#19"/></Control>
-		<Control name="knob[24]" title="Knob 25" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#1A"/></Control>
-		<Control name="knob[25]" title="Knob 26" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#1B"/></Control>
-		<Control name="knob[26]" title="Knob 27" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#1C"/></Control>
-		<Control name="knob[27]" title="Knob 28" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#1D"/></Control>
-		<Control name="knob[28]" title="Knob 29" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#1E"/></Control>
-		<Control name="knob[29]" title="Knob 30" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#1F"/></Control>
-		<Control name="knob[30]" title="Knob 31" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#21"/></Control>
-		<Control name="knob[31]" title="Knob 32" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#22"/></Control>
-		<!-- Encoder-push buttons (ch2 notes) -->
+		<!-- 256 encoders: 8 layers A-H, all assignable via Control Link -->
+		<Control name="knob[0]" title="Knob A1-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#01"/></Control>
+		<Control name="knob[1]" title="Knob A1-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#0A"/></Control>
+		<Control name="knob[2]" title="Knob A1-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#12"/></Control>
+		<Control name="knob[3]" title="Knob A1-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#1A"/></Control>
+		<Control name="knob[4]" title="Knob A2-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#02"/></Control>
+		<Control name="knob[5]" title="Knob A2-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#0B"/></Control>
+		<Control name="knob[6]" title="Knob A2-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#13"/></Control>
+		<Control name="knob[7]" title="Knob A2-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#1B"/></Control>
+		<Control name="knob[8]" title="Knob A3-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#03"/></Control>
+		<Control name="knob[9]" title="Knob A3-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#0C"/></Control>
+		<Control name="knob[10]" title="Knob A3-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#14"/></Control>
+		<Control name="knob[11]" title="Knob A3-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#1C"/></Control>
+		<Control name="knob[12]" title="Knob A4-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#04"/></Control>
+		<Control name="knob[13]" title="Knob A4-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#0D"/></Control>
+		<Control name="knob[14]" title="Knob A4-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#15"/></Control>
+		<Control name="knob[15]" title="Knob A4-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#1D"/></Control>
+		<Control name="knob[16]" title="Knob A5-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#05"/></Control>
+		<Control name="knob[17]" title="Knob A5-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#0E"/></Control>
+		<Control name="knob[18]" title="Knob A5-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#16"/></Control>
+		<Control name="knob[19]" title="Knob A5-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#1E"/></Control>
+		<Control name="knob[20]" title="Knob A6-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#07"/></Control>
+		<Control name="knob[21]" title="Knob A6-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#0F"/></Control>
+		<Control name="knob[22]" title="Knob A6-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#17"/></Control>
+		<Control name="knob[23]" title="Knob A6-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#1F"/></Control>
+		<Control name="knob[24]" title="Knob A7-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#08"/></Control>
+		<Control name="knob[25]" title="Knob A7-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#10"/></Control>
+		<Control name="knob[26]" title="Knob A7-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#18"/></Control>
+		<Control name="knob[27]" title="Knob A7-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#21"/></Control>
+		<Control name="knob[28]" title="Knob A8-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#09"/></Control>
+		<Control name="knob[29]" title="Knob A8-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#11"/></Control>
+		<Control name="knob[30]" title="Knob A8-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#19"/></Control>
+		<Control name="knob[31]" title="Knob A8-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#22"/></Control>
+		<Control name="knob[32]" title="Knob B1-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#34"/></Control>
+		<Control name="knob[33]" title="Knob B1-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#3C"/></Control>
+		<Control name="knob[34]" title="Knob B1-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#44"/></Control>
+		<Control name="knob[35]" title="Knob B1-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#4C"/></Control>
+		<Control name="knob[36]" title="Knob B2-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#35"/></Control>
+		<Control name="knob[37]" title="Knob B2-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#3D"/></Control>
+		<Control name="knob[38]" title="Knob B2-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#45"/></Control>
+		<Control name="knob[39]" title="Knob B2-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#4D"/></Control>
+		<Control name="knob[40]" title="Knob B3-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#36"/></Control>
+		<Control name="knob[41]" title="Knob B3-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#3E"/></Control>
+		<Control name="knob[42]" title="Knob B3-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#46"/></Control>
+		<Control name="knob[43]" title="Knob B3-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#4E"/></Control>
+		<Control name="knob[44]" title="Knob B4-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#37"/></Control>
+		<Control name="knob[45]" title="Knob B4-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#3F"/></Control>
+		<Control name="knob[46]" title="Knob B4-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#47"/></Control>
+		<Control name="knob[47]" title="Knob B4-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#4F"/></Control>
+		<Control name="knob[48]" title="Knob B5-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#38"/></Control>
+		<Control name="knob[49]" title="Knob B5-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#40"/></Control>
+		<Control name="knob[50]" title="Knob B5-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#48"/></Control>
+		<Control name="knob[51]" title="Knob B5-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#50"/></Control>
+		<Control name="knob[52]" title="Knob B6-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#39"/></Control>
+		<Control name="knob[53]" title="Knob B6-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#41"/></Control>
+		<Control name="knob[54]" title="Knob B6-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#49"/></Control>
+		<Control name="knob[55]" title="Knob B6-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#51"/></Control>
+		<Control name="knob[56]" title="Knob B7-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#3A"/></Control>
+		<Control name="knob[57]" title="Knob B7-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#42"/></Control>
+		<Control name="knob[58]" title="Knob B7-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#4A"/></Control>
+		<Control name="knob[59]" title="Knob B7-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#52"/></Control>
+		<Control name="knob[60]" title="Knob B8-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#3B"/></Control>
+		<Control name="knob[61]" title="Knob B8-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#43"/></Control>
+		<Control name="knob[62]" title="Knob B8-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#4B"/></Control>
+		<Control name="knob[63]" title="Knob B8-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#53"/></Control>
+		<Control name="knob[64]" title="Knob C1-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#01"/></Control>
+		<Control name="knob[65]" title="Knob C1-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#0A"/></Control>
+		<Control name="knob[66]" title="Knob C1-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#12"/></Control>
+		<Control name="knob[67]" title="Knob C1-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#1A"/></Control>
+		<Control name="knob[68]" title="Knob C2-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#02"/></Control>
+		<Control name="knob[69]" title="Knob C2-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#0B"/></Control>
+		<Control name="knob[70]" title="Knob C2-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#13"/></Control>
+		<Control name="knob[71]" title="Knob C2-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#1B"/></Control>
+		<Control name="knob[72]" title="Knob C3-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#03"/></Control>
+		<Control name="knob[73]" title="Knob C3-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#0C"/></Control>
+		<Control name="knob[74]" title="Knob C3-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#14"/></Control>
+		<Control name="knob[75]" title="Knob C3-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#1C"/></Control>
+		<Control name="knob[76]" title="Knob C4-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#04"/></Control>
+		<Control name="knob[77]" title="Knob C4-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#0D"/></Control>
+		<Control name="knob[78]" title="Knob C4-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#15"/></Control>
+		<Control name="knob[79]" title="Knob C4-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#1D"/></Control>
+		<Control name="knob[80]" title="Knob C5-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#05"/></Control>
+		<Control name="knob[81]" title="Knob C5-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#0E"/></Control>
+		<Control name="knob[82]" title="Knob C5-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#16"/></Control>
+		<Control name="knob[83]" title="Knob C5-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#1E"/></Control>
+		<Control name="knob[84]" title="Knob C6-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#07"/></Control>
+		<Control name="knob[85]" title="Knob C6-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#0F"/></Control>
+		<Control name="knob[86]" title="Knob C6-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#17"/></Control>
+		<Control name="knob[87]" title="Knob C6-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#1F"/></Control>
+		<Control name="knob[88]" title="Knob C7-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#08"/></Control>
+		<Control name="knob[89]" title="Knob C7-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#10"/></Control>
+		<Control name="knob[90]" title="Knob C7-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#18"/></Control>
+		<Control name="knob[91]" title="Knob C7-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#21"/></Control>
+		<Control name="knob[92]" title="Knob C8-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#09"/></Control>
+		<Control name="knob[93]" title="Knob C8-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#11"/></Control>
+		<Control name="knob[94]" title="Knob C8-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#19"/></Control>
+		<Control name="knob[95]" title="Knob C8-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#22"/></Control>
+		<Control name="knob[96]" title="Knob D1-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#34"/></Control>
+		<Control name="knob[97]" title="Knob D1-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#3C"/></Control>
+		<Control name="knob[98]" title="Knob D1-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#44"/></Control>
+		<Control name="knob[99]" title="Knob D1-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#4C"/></Control>
+		<Control name="knob[100]" title="Knob D2-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#35"/></Control>
+		<Control name="knob[101]" title="Knob D2-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#3D"/></Control>
+		<Control name="knob[102]" title="Knob D2-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#45"/></Control>
+		<Control name="knob[103]" title="Knob D2-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#4D"/></Control>
+		<Control name="knob[104]" title="Knob D3-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#36"/></Control>
+		<Control name="knob[105]" title="Knob D3-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#3E"/></Control>
+		<Control name="knob[106]" title="Knob D3-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#46"/></Control>
+		<Control name="knob[107]" title="Knob D3-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#4E"/></Control>
+		<Control name="knob[108]" title="Knob D4-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#37"/></Control>
+		<Control name="knob[109]" title="Knob D4-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#3F"/></Control>
+		<Control name="knob[110]" title="Knob D4-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#47"/></Control>
+		<Control name="knob[111]" title="Knob D4-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#4F"/></Control>
+		<Control name="knob[112]" title="Knob D5-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#38"/></Control>
+		<Control name="knob[113]" title="Knob D5-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#40"/></Control>
+		<Control name="knob[114]" title="Knob D5-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#48"/></Control>
+		<Control name="knob[115]" title="Knob D5-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#50"/></Control>
+		<Control name="knob[116]" title="Knob D6-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#39"/></Control>
+		<Control name="knob[117]" title="Knob D6-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#41"/></Control>
+		<Control name="knob[118]" title="Knob D6-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#49"/></Control>
+		<Control name="knob[119]" title="Knob D6-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#51"/></Control>
+		<Control name="knob[120]" title="Knob D7-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#3A"/></Control>
+		<Control name="knob[121]" title="Knob D7-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#42"/></Control>
+		<Control name="knob[122]" title="Knob D7-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#4A"/></Control>
+		<Control name="knob[123]" title="Knob D7-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#52"/></Control>
+		<Control name="knob[124]" title="Knob D8-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#3B"/></Control>
+		<Control name="knob[125]" title="Knob D8-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#43"/></Control>
+		<Control name="knob[126]" title="Knob D8-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#4B"/></Control>
+		<Control name="knob[127]" title="Knob D8-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#02" address="#53"/></Control>
+		<Control name="knob[128]" title="Knob E1-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#01"/></Control>
+		<Control name="knob[129]" title="Knob E1-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#0A"/></Control>
+		<Control name="knob[130]" title="Knob E1-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#12"/></Control>
+		<Control name="knob[131]" title="Knob E1-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#1A"/></Control>
+		<Control name="knob[132]" title="Knob E2-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#02"/></Control>
+		<Control name="knob[133]" title="Knob E2-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#0B"/></Control>
+		<Control name="knob[134]" title="Knob E2-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#13"/></Control>
+		<Control name="knob[135]" title="Knob E2-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#1B"/></Control>
+		<Control name="knob[136]" title="Knob E3-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#03"/></Control>
+		<Control name="knob[137]" title="Knob E3-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#0C"/></Control>
+		<Control name="knob[138]" title="Knob E3-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#14"/></Control>
+		<Control name="knob[139]" title="Knob E3-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#1C"/></Control>
+		<Control name="knob[140]" title="Knob E4-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#04"/></Control>
+		<Control name="knob[141]" title="Knob E4-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#0D"/></Control>
+		<Control name="knob[142]" title="Knob E4-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#15"/></Control>
+		<Control name="knob[143]" title="Knob E4-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#1D"/></Control>
+		<Control name="knob[144]" title="Knob E5-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#05"/></Control>
+		<Control name="knob[145]" title="Knob E5-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#0E"/></Control>
+		<Control name="knob[146]" title="Knob E5-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#16"/></Control>
+		<Control name="knob[147]" title="Knob E5-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#1E"/></Control>
+		<Control name="knob[148]" title="Knob E6-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#07"/></Control>
+		<Control name="knob[149]" title="Knob E6-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#0F"/></Control>
+		<Control name="knob[150]" title="Knob E6-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#17"/></Control>
+		<Control name="knob[151]" title="Knob E6-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#1F"/></Control>
+		<Control name="knob[152]" title="Knob E7-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#08"/></Control>
+		<Control name="knob[153]" title="Knob E7-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#10"/></Control>
+		<Control name="knob[154]" title="Knob E7-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#18"/></Control>
+		<Control name="knob[155]" title="Knob E7-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#21"/></Control>
+		<Control name="knob[156]" title="Knob E8-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#09"/></Control>
+		<Control name="knob[157]" title="Knob E8-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#11"/></Control>
+		<Control name="knob[158]" title="Knob E8-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#19"/></Control>
+		<Control name="knob[159]" title="Knob E8-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#22"/></Control>
+		<Control name="knob[160]" title="Knob F1-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#34"/></Control>
+		<Control name="knob[161]" title="Knob F1-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#3C"/></Control>
+		<Control name="knob[162]" title="Knob F1-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#44"/></Control>
+		<Control name="knob[163]" title="Knob F1-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#4C"/></Control>
+		<Control name="knob[164]" title="Knob F2-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#35"/></Control>
+		<Control name="knob[165]" title="Knob F2-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#3D"/></Control>
+		<Control name="knob[166]" title="Knob F2-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#45"/></Control>
+		<Control name="knob[167]" title="Knob F2-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#4D"/></Control>
+		<Control name="knob[168]" title="Knob F3-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#36"/></Control>
+		<Control name="knob[169]" title="Knob F3-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#3E"/></Control>
+		<Control name="knob[170]" title="Knob F3-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#46"/></Control>
+		<Control name="knob[171]" title="Knob F3-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#4E"/></Control>
+		<Control name="knob[172]" title="Knob F4-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#37"/></Control>
+		<Control name="knob[173]" title="Knob F4-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#3F"/></Control>
+		<Control name="knob[174]" title="Knob F4-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#47"/></Control>
+		<Control name="knob[175]" title="Knob F4-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#4F"/></Control>
+		<Control name="knob[176]" title="Knob F5-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#38"/></Control>
+		<Control name="knob[177]" title="Knob F5-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#40"/></Control>
+		<Control name="knob[178]" title="Knob F5-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#48"/></Control>
+		<Control name="knob[179]" title="Knob F5-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#50"/></Control>
+		<Control name="knob[180]" title="Knob F6-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#39"/></Control>
+		<Control name="knob[181]" title="Knob F6-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#41"/></Control>
+		<Control name="knob[182]" title="Knob F6-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#49"/></Control>
+		<Control name="knob[183]" title="Knob F6-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#51"/></Control>
+		<Control name="knob[184]" title="Knob F7-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#3A"/></Control>
+		<Control name="knob[185]" title="Knob F7-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#42"/></Control>
+		<Control name="knob[186]" title="Knob F7-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#4A"/></Control>
+		<Control name="knob[187]" title="Knob F7-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#52"/></Control>
+		<Control name="knob[188]" title="Knob F8-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#3B"/></Control>
+		<Control name="knob[189]" title="Knob F8-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#43"/></Control>
+		<Control name="knob[190]" title="Knob F8-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#4B"/></Control>
+		<Control name="knob[191]" title="Knob F8-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#04" address="#53"/></Control>
+		<Control name="knob[192]" title="Knob G1-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#01"/></Control>
+		<Control name="knob[193]" title="Knob G1-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#0A"/></Control>
+		<Control name="knob[194]" title="Knob G1-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#12"/></Control>
+		<Control name="knob[195]" title="Knob G1-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#1A"/></Control>
+		<Control name="knob[196]" title="Knob G2-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#02"/></Control>
+		<Control name="knob[197]" title="Knob G2-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#0B"/></Control>
+		<Control name="knob[198]" title="Knob G2-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#13"/></Control>
+		<Control name="knob[199]" title="Knob G2-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#1B"/></Control>
+		<Control name="knob[200]" title="Knob G3-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#03"/></Control>
+		<Control name="knob[201]" title="Knob G3-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#0C"/></Control>
+		<Control name="knob[202]" title="Knob G3-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#14"/></Control>
+		<Control name="knob[203]" title="Knob G3-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#1C"/></Control>
+		<Control name="knob[204]" title="Knob G4-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#04"/></Control>
+		<Control name="knob[205]" title="Knob G4-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#0D"/></Control>
+		<Control name="knob[206]" title="Knob G4-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#15"/></Control>
+		<Control name="knob[207]" title="Knob G4-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#1D"/></Control>
+		<Control name="knob[208]" title="Knob G5-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#05"/></Control>
+		<Control name="knob[209]" title="Knob G5-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#0E"/></Control>
+		<Control name="knob[210]" title="Knob G5-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#16"/></Control>
+		<Control name="knob[211]" title="Knob G5-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#1E"/></Control>
+		<Control name="knob[212]" title="Knob G6-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#07"/></Control>
+		<Control name="knob[213]" title="Knob G6-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#0F"/></Control>
+		<Control name="knob[214]" title="Knob G6-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#17"/></Control>
+		<Control name="knob[215]" title="Knob G6-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#1F"/></Control>
+		<Control name="knob[216]" title="Knob G7-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#08"/></Control>
+		<Control name="knob[217]" title="Knob G7-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#10"/></Control>
+		<Control name="knob[218]" title="Knob G7-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#18"/></Control>
+		<Control name="knob[219]" title="Knob G7-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#21"/></Control>
+		<Control name="knob[220]" title="Knob G8-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#09"/></Control>
+		<Control name="knob[221]" title="Knob G8-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#11"/></Control>
+		<Control name="knob[222]" title="Knob G8-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#19"/></Control>
+		<Control name="knob[223]" title="Knob G8-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#22"/></Control>
+		<Control name="knob[224]" title="Knob H1-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#34"/></Control>
+		<Control name="knob[225]" title="Knob H1-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#3C"/></Control>
+		<Control name="knob[226]" title="Knob H1-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#44"/></Control>
+		<Control name="knob[227]" title="Knob H1-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#4C"/></Control>
+		<Control name="knob[228]" title="Knob H2-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#35"/></Control>
+		<Control name="knob[229]" title="Knob H2-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#3D"/></Control>
+		<Control name="knob[230]" title="Knob H2-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#45"/></Control>
+		<Control name="knob[231]" title="Knob H2-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#4D"/></Control>
+		<Control name="knob[232]" title="Knob H3-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#36"/></Control>
+		<Control name="knob[233]" title="Knob H3-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#3E"/></Control>
+		<Control name="knob[234]" title="Knob H3-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#46"/></Control>
+		<Control name="knob[235]" title="Knob H3-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#4E"/></Control>
+		<Control name="knob[236]" title="Knob H4-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#37"/></Control>
+		<Control name="knob[237]" title="Knob H4-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#3F"/></Control>
+		<Control name="knob[238]" title="Knob H4-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#47"/></Control>
+		<Control name="knob[239]" title="Knob H4-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#4F"/></Control>
+		<Control name="knob[240]" title="Knob H5-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#38"/></Control>
+		<Control name="knob[241]" title="Knob H5-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#40"/></Control>
+		<Control name="knob[242]" title="Knob H5-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#48"/></Control>
+		<Control name="knob[243]" title="Knob H5-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#50"/></Control>
+		<Control name="knob[244]" title="Knob H6-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#39"/></Control>
+		<Control name="knob[245]" title="Knob H6-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#41"/></Control>
+		<Control name="knob[246]" title="Knob H6-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#49"/></Control>
+		<Control name="knob[247]" title="Knob H6-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#51"/></Control>
+		<Control name="knob[248]" title="Knob H7-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#3A"/></Control>
+		<Control name="knob[249]" title="Knob H7-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#42"/></Control>
+		<Control name="knob[250]" title="Knob H7-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#4A"/></Control>
+		<Control name="knob[251]" title="Knob H7-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#52"/></Control>
+		<Control name="knob[252]" title="Knob H8-1" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#3B"/></Control>
+		<Control name="knob[253]" title="Knob H8-2" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#43"/></Control>
+		<Control name="knob[254]" title="Knob H8-3" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#4B"/></Control>
+		<Control name="knob[255]" title="Knob H8-4" type="knob" options="receive transmit public"><MidiMessage status="#B0" channel="#06" address="#53"/></Control>
+		<!-- 32 pushes (Layer A) -->
 		<Control name="push[0][0]" title="Push 1-1" type="button" options="receive public"><MidiMessage status="#90" channel="#01" address="#01"/></Control>
 		<Control name="push[0][1]" title="Push 1-2" type="button" options="receive public"><MidiMessage status="#90" channel="#01" address="#0A"/></Control>
 		<Control name="push[0][2]" title="Push 1-3" type="button" options="receive public"><MidiMessage status="#90" channel="#01" address="#12"/></Control>
@@ -343,37 +586,34 @@
 	<ColorTables><ColorTable name="DropColors" cachesize="64" compare="equal"/></ColorTables>
 
 	<Mappings>
-		<PadSection name="PadSectionElement" rows="4" roles="launcherinput">
-			<foreach variable="$i" count="16">
-				<Pad control="pad[$i]">
-					<Value control="padLEDState[$i]" param="state"/>
-					<PlainValue control="padLEDAnimation[$i]" param="animation"/>
-					<ColorIndex table="DropColors" control="padLEDColor[$i]" param="color"/>
-				</Pad>
-			</foreach>
+		<PadSection name="SceneSectionElement" rows="1" roles="launcherinput">
+			<foreach variable="$i" count="4"><Pad control="scenePad[$i]">
+				<Value control="sceneLEDState[$i]" param="state"/><PlainValue control="sceneLEDAnimation[$i]" param="animation"/><ColorIndex table="DropColors" control="sceneLEDColor[$i]" param="color"/>
+			</Pad></foreach>
 		</PadSection>
-
+		<PadSection name="PadSectionElement" rows="4" roles="launcherinput">
+			<foreach variable="$i" count="16"><Pad control="pad[$i]">
+				<Value control="padLEDState[$i]" param="state"/><PlainValue control="padLEDAnimation[$i]" param="animation"/><ColorIndex table="DropColors" control="padLEDColor[$i]" param="color"/>
+			</Pad></foreach>
+		</PadSection>
 		<Global>
 			<Invoke control="navUp" onReceive="onLauncherNavigateUp"/>
 			<Invoke control="navDown" onReceive="onLauncherNavigateDown"/>
 			<Invoke control="navLeft" onReceive="onLauncherNavigateLeft"/>
 			<Invoke control="navRight" onReceive="onLauncherNavigateRight"/>
-			<Value control="trackStop[0]" param="stopModifier"/>
-			<Value control="trackStop[1]" param="stopModifier"/>
-			<Value control="trackStop[2]" param="stopModifier"/>
-			<Value control="trackStop[3]" param="stopModifier"/>
 			<Command control="stopAll" command.category="Launcher" command.name="Stop All"/>
+			<Command control="transportStart" command.category="Transport" command.name="Start"/>
+			<Command control="transportStop"  command.category="Transport" command.name="Stop"/>
+			<!-- Program Change -> jump the launcher to an absolute scene bank. -->
+			<foreach variable="$i" count="16">
+				<Invoke control="jumpPC[$i]" onReceive="onLauncherJumpScene($i)"/>
+			</foreach>
 		</Global>
-
 		<DeviceMapping device="MixerConsole" name="MixerMapping">
 			<PlacementBank target="RemoteBank" pagesize="64" name="ChannelBankElement">
-				<foreach variable="$ch" count="64">
-					<Strip>
-						<Value control="fader[$ch]" param="volume"/>
-						<Toggle control="muteBtn[$ch]" param="mute" options="momentary"/>
-						<Value control="muteLED[$ch]" param="mute"/>
-					</Strip>
-				</foreach>
+				<foreach variable="$ch" count="64"><Strip>
+					<Value control="fader[$ch]" param="volume"/><Toggle control="muteBtn[$ch]" param="mute" options="momentary"/><Value control="muteLED[$ch]" param="mute"/>
+				</Strip></foreach>
 			</PlacementBank>
 		</DeviceMapping>
 	</Mappings>
