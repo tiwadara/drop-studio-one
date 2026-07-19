@@ -26,10 +26,8 @@ DropProtocol.kBaseNote         = 88;            // NM
 
 // --- Program Change -> scene launch ---------------------------------------------------------
 // The Drop's snapshot "jump" emits Program Change on ch13 (status 0xC0|0x0C = 0xCC), program =
-// target scene. DropMidiDevice translates it into a note-on/off on ch14 (0x90|0x0D = 0x9D) at
-// note = program number, which presses the hidden SceneLaunchElement pad -> launches scene N.
-DropProtocol.kProgramChangeStatus = 0xC0 | 0x0C;  // 0xCC - PC on channel 13
-DropProtocol.kSceneLaunchStatus   = 0x90 | 0x0D;  // 0x9D - note-on channel 14
+// target scene. Each program value is bound DIRECTLY to a hidden scene-launch pad in the surface
+// (sceneLaunchPad[program], a kScenesOnly pad), so host control-matching launches scene N.
 
 // --- LED velocity encoding ---
 DropProtocol.kEmptyVelocity    = 1;             // dim / no clip

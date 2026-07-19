@@ -89,14 +89,9 @@ class DropMidiDevice extends PreSonus.ControlSurfaceDevice {
     // control catches -> which drives a Transport command.
     //   Start/Continue -> ch16 note 1   Stop -> ch16 note 2
     onMidiEvent(status, data1, data2) {
-        // Program Change (Drop snapshot jump, ch13) -> LAUNCH scene N. Translate to a note-on/off
-        // on the hidden scene-launch pad (ch14 note N), which presses SceneLaunchElement pad N.
-        if (status === DropProtocol.kProgramChangeStatus) {
-            let scene = data1;                          // program number = scene index
-            super.onMidiEvent(DropProtocol.kSceneLaunchStatus, scene, 127);   // press  -> launch
-            super.onMidiEvent(DropProtocol.kSceneLaunchStatus, scene, 0);     // release
-            return;
-        }
+        // NOTE: the Drop snapshot Program Change (ch13) is handled by DIRECT control-matching
+        // (sceneLaunchPad[N] in the surface) - NOT here. Injecting via super.onMidiEvent() does
+        // not reach the host's control matching, so scene launch must be a real bound control.
         if (status === 0xFA || status === 0xFB) {       // Start / Continue
             this.sendMidi(DropProtocol.kNoteOnStatus, 108, 15);   // DEBUG: light scene-drop pad if we see Start
             super.onMidiEvent(DropProtocol.kNoteOnStatus, 1, 127);

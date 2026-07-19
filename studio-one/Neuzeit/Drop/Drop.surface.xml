@@ -93,11 +93,13 @@
 		<Control name="transportStart" type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#01"/></Control>
 		<Control name="transportStop"  type="button" options="receive"><MidiMessage status="#90" channel="#0F" address="#02"/></Control>
 		<!-- Hidden direct scene-launch pads. A kScenesOnly PadSection maps pad[i] -> scene i,
-		     so pressing sceneLaunchPad[N] LAUNCHES scene N (no viewport movement). These are
-		     driven internally: DropMidiDevice translates a Program Change (program = N) into a
-		     note-on/off on ch14 (#0D) note N, which "presses" this pad. 128 = full PC range. -->
+		     so "pressing" sceneLaunchPad[N] LAUNCHES scene N (no viewport movement). Each pad is
+		     bound DIRECTLY to the Drop snapshot Program Change (ch13 = #0C, program = address),
+		     so the host's normal control-matching fires it - same path as the physical scene row.
+		     type="trigger" = one-shot per message (re-triggerable), the shipped FCB1010 PC pattern.
+		     128 = full PC range 0..127. -->
 		<foreach variable="$i" count="128">
-			<Control name="sceneLaunchPad[$i]" type="button" options="receive"><MidiMessage status="#90" channel="#0D" address="$i"/></Control>
+			<Control name="sceneLaunchPad[$i]" type="trigger" options="receive"><MidiMessage status="#C0" channel="#0C" address="$i"/></Control>
 		</foreach>
 		<!-- 64 faders -->
 		<Control name="fader[0]" title="Fader A1" type="fader" options="receive transmit public"><MidiMessage status="#B0" channel="#00" address="#2C"/></Control>
