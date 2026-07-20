@@ -10,6 +10,7 @@ It turns the Drop into a **Launcher + mixer surface**:
 - **8 mute buttons → channel mute**
 - **32 encoder pushes → freely assignable** momentary buttons (via Control Link)
 - **Session arrows → move the Launcher focus box**, plus a **Stop-All** button
+- **Snapshots → launch any Launcher scene** (Drop Program Change → scene N)
 
 > Not affiliated with or endorsed by Neuzeit Instruments or PreSonus. Community project, use at your own risk.
 
@@ -63,10 +64,36 @@ Key points:
 | Mutes (8 layers A–H) | ch 2/4/6/8 | channel **mute**, ch 1–64 |
 | Encoders ×32 | ch1 CC 1–34 | free **`Knob 1–32`** — assign to plugins via Control Link |
 | Encoder pushes ×32 | **ch2** notes 1–34 | free momentary **buttons** — assign via Control Link |
+| Snapshots | **ch13** Program Change | launch **scene = program number** (see below) |
 
 The 8 Drop **layers** expand the mixer: each layer sends different CCs on the same 8 physical faders/mutes, so A–H address channels 1–64. No layer-switch handling is needed — every layer's CCs are pre-mapped.
 
 The grid LEDs echo Studio One clip state: velocity = `colorIndex + 2`, `+16` queued, `+64` playing, `1` = empty.
+
+---
+
+## Snapshots → scene launch (separate from the grid)
+
+There are **two independent paths** to the Launcher — don't conflate them:
+
+| Path | Drop mode | MIDI | Effect |
+|---|---|---|---|
+| **Launcher grid** | DAW mode — physical grid + top scene row | ch16 notes | launch clips / scenes, nav, LEDs |
+| **Snapshot scene launch** | snapshot mode — snapshot fires a Program Change | **ch13 Program Change** | launch **scene = program number** |
+
+Set the Drop's snapshot output to **Program + Bank** (channel 13). Each snapshot's
+**program number = the 0-based scene it launches** (program 0 → scene 0, etc.), settable
+per snapshot on the fly. Firing the snapshot launches that scene, with **no viewport
+movement** — same effect as tapping the physical scene row, but for any scene.
+
+How it works internally: the surface has a hidden `kScenesOnly` PadSection
+(`SceneLaunchElement`) whose pad *N* is bound directly to Program Change *N*, so Studio
+One's own control-matching "presses" it and launches scene *N*. The two paths never touch.
+
+**Banks:** the Drop groups snapshots as 20 per bank (4×5 matrix), up to 20 banks. With a
+**single bank** (≤20 snapshots) the program number alone is unique — which is what this
+maps. Program Change tops out at 128, so scenes 0–127 are addressable. (Multi-bank
+addressing, where the Bank Select would offset the scene range, is not wired up.)
 
 ---
 
