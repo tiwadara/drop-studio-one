@@ -14,6 +14,9 @@ It turns the Drop into a **Launcher + mixer surface**:
 
 > Not affiliated with or endorsed by Neuzeit Instruments or PreSonus. Community project, use at your own risk.
 
+**🌐 Landing page: [tiwadara.github.io/drop-studio-one](https://tiwadara.github.io/drop-studio-one/)**
+
+
 ---
 
 ## Repository layout
