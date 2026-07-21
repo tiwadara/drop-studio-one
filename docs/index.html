@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Neuzeit Drop → Studio One 7 — control-surface integration</title>
+<meta name="description" content="An unofficial control-surface integration that turns the Neuzeit Instruments Drop into a Launcher + mixer surface for PreSonus Studio One 7 — clip launch, 64-channel mixer, snapshot scene launch." />
+<meta property="og:title" content="Neuzeit Drop → Studio One 7" />
+<meta property="og:description" content="Turn the Neuzeit Drop into a Launcher + mixer surface for Studio One 7 — clip launch, 8-layer mixer, snapshot → scene launch." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="drop.png" />
+<meta name="theme-color" content="#0b0c10" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%230b0c10%22/><circle cx=%2250%22 cy=%2250%22 r=%2226%22 fill=%22none%22 stroke=%22%235eead4%22 stroke-width=%228%22/></svg>" />
+<style>
+  :root{
+    --bg:#0b0c10; --bg2:#111319; --card:#15171f; --line:#232634;
+    --ink:#e8ebf2; --muted:#9aa3b2; --dim:#6b7280;
+    --a1:#5eead4; --a2:#7c5cff; --a3:#ff5c8a; --a4:#ffd166;
+    --grad:linear-gradient(100deg,var(--a1),var(--a2) 55%,var(--a3));
+    --radius:16px; --max:1080px;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.6;
+    -webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:var(--a1);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
+  .mono{font-family:var(--mono)}
+
+  /* header */
+  header{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
+    background:rgba(11,12,16,.72);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2px}
+  .dot{width:16px;height:16px;border-radius:50%;background:var(--grad);box-shadow:0 0 18px rgba(124,92,255,.6)}
+  .navlinks{display:flex;gap:22px;align-items:center;font-size:14px;color:var(--muted)}
+  .navlinks a{color:var(--muted)}.navlinks a:hover{color:var(--ink);text-decoration:none}
+  @media(max-width:640px){.navlinks .hide{display:none}}
+
+  /* buttons */
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:12px;
+    font-weight:600;font-size:15px;border:1px solid var(--line);color:var(--ink);
+    background:var(--card);transition:.18s;white-space:nowrap}
+  .btn:hover{text-decoration:none;transform:translateY(-1px);border-color:#39405a}
+  .btn.primary{background:var(--grad);color:#0b0c10;border:none;box-shadow:0 10px 30px -10px rgba(124,92,255,.6)}
+  .btn.primary:hover{filter:brightness(1.06)}
+
+  /* hero */
+  .hero{position:relative;padding:76px 0 40px;overflow:hidden}
+  .glow{position:absolute;inset:-30% -10% auto -10%;height:520px;pointer-events:none;
+    background:radial-gradient(60% 60% at 30% 20%,rgba(94,234,212,.18),transparent 60%),
+               radial-gradient(50% 50% at 80% 10%,rgba(124,92,255,.20),transparent 60%);
+    filter:blur(6px)}
+  .hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+  @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:28px}}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12.5px;
+    letter-spacing:.6px;text-transform:uppercase;color:var(--a1);
+    border:1px solid var(--line);padding:6px 12px;border-radius:999px;background:var(--bg2)}
+  h1{font-size:clamp(34px,5vw,54px);line-height:1.05;margin:18px 0 10px;letter-spacing:-.5px;font-weight:800}
+  h1 .accent{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .sub{font-size:clamp(16px,2.2vw,19px);color:var(--muted);max-width:34ch}
+  .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+  .note{margin-top:16px;font-size:13px;color:var(--dim)}
+  .shot{position:relative}
+  .shot img{width:100%;border-radius:var(--radius);border:1px solid var(--line);
+    box-shadow:0 40px 80px -30px rgba(0,0,0,.8);background:#000}
+  .shot .ring{position:absolute;inset:-1px;border-radius:var(--radius);padding:1px;
+    background:var(--grad);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
+    -webkit-mask-composite:xor;mask-composite:exclude;opacity:.5;pointer-events:none}
+
+  /* section */
+  section{padding:56px 0;border-top:1px solid var(--line)}
+  .kicker{font-family:var(--mono);font-size:12.5px;letter-spacing:.6px;text-transform:uppercase;color:var(--a2)}
+  h2{font-size:clamp(24px,3.4vw,34px);margin:8px 0 6px;letter-spacing:-.4px;font-weight:800}
+  .lead{color:var(--muted);max-width:60ch;margin:0 0 8px}
+
+  /* feature cards */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+  @media(max-width:860px){.cards{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.cards{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:20px;
+    transition:.18s}
+  .card:hover{border-color:#39405a;transform:translateY(-2px)}
+  .card .ico{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;margin-bottom:12px;
+    background:var(--bg2);border:1px solid var(--line);font-size:19px}
+  .card h3{margin:0 0 6px;font-size:16.5px}
+  .card p{margin:0;color:var(--muted);font-size:14px}
+
+  /* table */
+  .tablewrap{margin-top:24px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+  th{background:var(--bg2);color:var(--muted);font-weight:600;font-size:12.5px;letter-spacing:.3px;text-transform:uppercase}
+  tr:last-child td{border-bottom:none}
+  td.mid{color:var(--a1);font-family:var(--mono);font-size:13px;white-space:nowrap}
+  tbody tr:hover td{background:rgba(255,255,255,.02)}
+
+  /* steps */
+  .steps{counter-reset:s;display:grid;gap:14px;margin-top:26px}
+  .step{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;
+    background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .step .n{counter-increment:s;width:32px;height:32px;border-radius:9px;display:grid;place-items:center;
+    font-weight:800;color:#0b0c10;background:var(--grad)}
+  .step .n::before{content:counter(s)}
+  .step h4{margin:2px 0 4px;font-size:16px}
+  .step p{margin:0;color:var(--muted);font-size:14px}
+  code{font-family:var(--mono);font-size:12.5px;background:var(--bg2);border:1px solid var(--line);
+    padding:2px 7px;border-radius:6px;color:#cfe9e2;word-break:break-all}
+
+  /* palette strip */
+  .palette{display:flex;height:6px;border-radius:999px;overflow:hidden;margin:0 0 4px}
+  .palette i{flex:1}
+
+  .callout{margin-top:22px;background:linear-gradient(180deg,rgba(124,92,255,.08),transparent);
+    border:1px solid var(--line);border-left:3px solid var(--a2);border-radius:12px;padding:18px 20px}
+  .callout strong{color:var(--ink)}
+
+  footer{padding:44px 0 60px;border-top:1px solid var(--line);color:var(--dim);font-size:13.5px}
+  .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+  .badge{font-family:var(--mono);font-size:12px;color:var(--muted);border:1px solid var(--line);
+    padding:5px 10px;border-radius:999px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand"><span class="dot"></span> Drop&nbsp;→&nbsp;Studio&nbsp;One</div>
+    <nav class="navlinks">
+      <a class="hide" href="#features">Features</a>
+      <a class="hide" href="#mapping">Mapping</a>
+      <a class="hide" href="#setup">Setup</a>
+      <a href="https://github.com/tiwadara/drop-studio-one">GitHub&nbsp;↗</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="glow"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Unofficial · Community project</span>
+      <h1>Turn the Neuzeit <span class="accent">Drop</span> into a Studio&nbsp;One surface</h1>
+      <div class="palette" aria-hidden="true">
+        <i style="background:#FF0000"></i><i style="background:#FF6A00"></i><i style="background:#FFD500"></i>
+        <i style="background:#AEFF00"></i><i style="background:#00FF00"></i><i style="background:#00FFAA"></i>
+        <i style="background:#00FFFF"></i><i style="background:#00AAFF"></i><i style="background:#0055FF"></i>
+        <i style="background:#7F00FF"></i><i style="background:#FF00FF"></i><i style="background:#FF0080"></i>
+      </div>
+      <p class="sub">A control-surface integration for <strong>PreSonus Studio&nbsp;One&nbsp;7</strong> — clip &amp; scene launch with LED feedback, a 64-channel mixer across 8 layers, and snapshot-driven scene firing.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://github.com/tiwadara/drop-studio-one">Get it on GitHub</a>
+        <a class="btn" href="daw-init-studioone.json" download>Download Drop config</a>
+      </div>
+      <p class="note">MIT-licensed · macOS &amp; Windows · not affiliated with Neuzeit&nbsp;Instruments or PreSonus.</p>
+    </div>
+    <div class="shot">
+      <img src="drop.png" alt="Neuzeit Instruments Drop controller" loading="eager" />
+      <span class="ring"></span>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="wrap">
+    <div class="kicker">What it does</div>
+    <h2>One controller, the whole Launcher + mixer</h2>
+    <p class="lead">Every physical control on the Drop is mapped to something useful in Studio One — nothing left dark.</p>
+    <div class="cards">
+      <div class="card"><div class="ico">🎛️</div><h3>Clip launch grid</h3><p>The 4×4 pad grid fires Launcher clips with live colour &amp; state LED feedback — empty, queued, playing.</p></div>
+      <div class="card"><div class="ico">🎬</div><h3>Scene launch</h3><p>Top row launches whole scenes; the session arrows move the Launcher focus box, plus a Stop-All.</p></div>
+      <div class="card"><div class="ico">📸</div><h3>Snapshot → scene</h3><p>Fire any scene from a Drop snapshot via Program Change — set the target scene per snapshot, on the fly.</p></div>
+      <div class="card"><div class="ico">🎚️</div><h3>64-channel mixer</h3><p>8 faders across 8 layers (A–H) reach channels 1–64 for volume, with matching mutes.</p></div>
+      <div class="card"><div class="ico">🎯</div><h3>32 assignable knobs</h3><p>Encoders map to free Knob controls; 32 encoder pushes become momentary buttons — assign via Control Link.</p></div>
+      <div class="card"><div class="ico">⏱️</div><h3>Tempo master</h3><p>Studio One drives the Drop as clock master — set the Drop to Ext MIDI and it locks to your session tempo.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MAPPING -->
+<section id="mapping">
+  <div class="wrap">
+    <div class="kicker">Mapping</div>
+    <h2>What each control drives</h2>
+    <p class="lead">The clip grid, nav and stop use the Drop's built-in DAW notes; the mixer, knobs and snapshot launch use the config below.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Drop control</th><th>MIDI</th><th>Studio One</th></tr></thead>
+        <tbody>
+          <tr><td>4×4 pad grid</td><td class="mid">ch16 notes</td><td>Launcher clip launch + LEDs</td></tr>
+          <tr><td>Top row</td><td class="mid">ch16 notes</td><td>Scene launch</td></tr>
+          <tr><td>Session arrows ◀ ▲ ▼ ▶</td><td class="mid">ch16 84–87</td><td>Move the Launcher focus box</td></tr>
+          <tr><td>Stop-All</td><td class="mid">ch16 127</td><td>Launcher · Stop All</td></tr>
+          <tr><td>Faders (8 layers)</td><td class="mid">ch 1/3/5/7 CC</td><td>Channel volume · ch 1–64</td></tr>
+          <tr><td>Mutes (8 layers)</td><td class="mid">ch 2/4/6/8</td><td>Channel mute · ch 1–64</td></tr>
+          <tr><td>Encoders ×32</td><td class="mid">ch1 CC</td><td>Free Knob controls (Control Link)</td></tr>
+          <tr><td>Encoder pushes ×32</td><td class="mid">ch2 notes</td><td>Free momentary buttons</td></tr>
+          <tr><td>Snapshots</td><td class="mid">ch13 Prog Change</td><td>Launch scene = program number</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <strong>Two independent paths.</strong> In DAW mode the grid launches clips and scenes; in snapshot mode a Program Change fires a scene by number — with no viewport movement. They never cross, so you can arrange with one and recall with the other.
+    </div>
+  </div>
+</section>
+
+<!-- SETUP -->
+<section id="setup">
+  <div class="wrap">
+    <div class="kicker">Setup</div>
+    <h2>Running in four steps</h2>
+    <div class="steps">
+      <div class="step"><div class="n"></div><div><h4>Prepare the Drop</h4><p>Import <code>drop-config/daw-init-studioone.json</code> into the Drop (back up your own config first). Set encoder pushes to Temporary if you'll use them.</p></div></div>
+      <div class="step"><div class="n"></div><div><h4>Install the device</h4><p>Copy the folder <code>studio-one/Neuzeit/Drop/</code> into your Studio One <code>User Devices/Neuzeit/Drop/</code> directory (macOS or Windows).</p></div></div>
+      <div class="step"><div class="n"></div><div><h4>Add it in Studio One</h4><p>Settings ▸ External Devices ▸ Add… ▸ Neuzeit Instruments ▸ Drop. Set Receive-From and Send-To to the Drop's MIDI port.</p></div></div>
+      <div class="step"><div class="n"></div><div><h4>Play</h4><p>Open the Launcher — the grid lights up and launches clips. Map encoder pushes to any parameter with Control Link.</p></div></div>
+    </div>
+    <div style="margin-top:26px"><a class="btn primary" href="https://github.com/tiwadara/drop-studio-one#setup">Full setup &amp; docs on GitHub</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <div class="brand" style="margin-bottom:10px"><span class="dot"></span> Drop → Studio One</div>
+      <div>Unofficial community project · MIT License.<br/>Not affiliated with or endorsed by Neuzeit Instruments or PreSonus.</div>
+    </div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+      <span class="badge">Studio One 7</span>
+      <span class="badge">macOS · Windows</span>
+      <a class="btn" href="https://github.com/tiwadara/drop-studio-one">View source ↗</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
