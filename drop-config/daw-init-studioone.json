@@ -5645,7 +5645,7 @@
     "name": "PUSH A-1-1",
     "colId": 0,
     "dropOrder": 0,
-    "behavId": 3,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
     "feedbSlot": 0,
@@ -5665,208 +5665,461 @@
     "name": "PUSH A-1-2",
     "colId": 0,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 10.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "002": {
     "name": "PUSH A-1-3",
     "colId": 0,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 18.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "003": {
     "name": "PUSH A-1-4",
     "colId": 0,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 26.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "010": {
     "name": "PUSH A-2-1",
     "colId": 1,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 2.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "011": {
     "name": "PUSH A-2-2",
     "colId": 1,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 11.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "012": {
     "name": "PUSH A-2-3",
     "colId": 1,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 19.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "013": {
     "name": "PUSH A-2-4",
     "colId": 1,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 27.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "020": {
     "name": "PUSH A-3-1",
     "colId": 2,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 3.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "021": {
     "name": "PUSH A-3-2",
     "colId": 2,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 12.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "022": {
     "name": "PUSH A-3-3",
     "colId": 2,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 20.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "023": {
     "name": "PUSH A-3-4",
     "colId": 2,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 28.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "030": {
     "name": "PUSH A-4-1",
     "colId": 3,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 4.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "031": {
     "name": "PUSH A-4-2",
     "colId": 3,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 13.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "032": {
     "name": "PUSH A-4-3",
     "colId": 3,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 21.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "033": {
     "name": "PUSH A-4-4",
     "colId": 3,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 29.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "040": {
     "name": "PUSH A-5-1",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 5.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "041": {
     "name": "PUSH A-5-2",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 14.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "042": {
     "name": "PUSH A-5-3",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 22.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "043": {
     "name": "PUSH A-5-4",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 30.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "050": {
     "name": "PUSH A-6-1",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 7.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "051": {
     "name": "PUSH A-6-2",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 15.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "052": {
     "name": "PUSH A-6-3",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 23.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "053": {
     "name": "PUSH A-6-4",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 31.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "060": {
     "name": "PUSH A-7-1",
@@ -5892,28 +6145,61 @@
     "name": "PUSH A-7-2",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 16.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "062": {
     "name": "PUSH A-7-3",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 24.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "063": {
     "name": "PUSH A-7-4",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 33.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "070": {
     "name": "PUSH A-8-1",
@@ -5939,25 +6225,47 @@
     "name": "PUSH A-8-2",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 17.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "072": {
     "name": "PUSH A-8-3",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 25.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "073": {
     "name": "PUSH A-8-4",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 3,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
     "feedbSlot": 0,
@@ -5977,2017 +6285,4481 @@
     "name": "PUSH B-1-1",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 52.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "101": {
     "name": "PUSH B-1-2",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 60.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "102": {
     "name": "PUSH B-1-3",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 68.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "103": {
     "name": "PUSH B-1-4",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 76.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "110": {
     "name": "PUSH B-2-1",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 53.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "111": {
     "name": "PUSH B-2-2",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 61.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "112": {
     "name": "PUSH B-2-3",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 69.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "113": {
     "name": "PUSH B-2-4",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 77.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "120": {
     "name": "PUSH B-3-1",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 54.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "121": {
     "name": "PUSH B-3-2",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 62.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "122": {
     "name": "PUSH B-3-3",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 70.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "123": {
     "name": "PUSH B-3-4",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 78.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "130": {
     "name": "PUSH B-4-1",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 55.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "131": {
     "name": "PUSH B-4-2",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 63.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "132": {
     "name": "PUSH B-4-3",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 71.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "133": {
     "name": "PUSH B-4-4",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 79.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "140": {
     "name": "PUSH B-5-1",
     "colId": 3,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 56.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "141": {
     "name": "PUSH B-5-2",
     "colId": 3,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 64.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "142": {
     "name": "PUSH B-5-3",
     "colId": 3,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 72.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "143": {
     "name": "PUSH B-5-4",
     "colId": 3,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 80.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "150": {
     "name": "PUSH B-6-1",
     "colId": 2,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 57.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "151": {
     "name": "PUSH B-6-2",
     "colId": 2,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 65.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "152": {
     "name": "PUSH B-6-3",
     "colId": 2,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 73.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "153": {
     "name": "PUSH B-6-4",
     "colId": 2,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 81.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "160": {
     "name": "PUSH B-7-1",
     "colId": 1,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 58.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "161": {
     "name": "PUSH B-7-2",
     "colId": 1,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 66.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "162": {
     "name": "PUSH B-7-3",
     "colId": 1,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 74.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "163": {
     "name": "PUSH B-7-4",
     "colId": 1,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 82.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "170": {
     "name": "PUSH B-8-1",
     "colId": 0,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 59.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "171": {
     "name": "PUSH B-8-2",
     "colId": 0,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 67.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "172": {
     "name": "PUSH B-8-3",
     "colId": 0,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 75.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "173": {
     "name": "PUSH B-8-4",
     "colId": 0,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 83.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "200": {
     "name": "PUSH C-1-1",
     "colId": 2,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 1.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "201": {
     "name": "PUSH C-1-2",
     "colId": 2,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 10.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "202": {
     "name": "PUSH C-1-3",
     "colId": 2,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 18.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "203": {
     "name": "PUSH C-1-4",
     "colId": 2,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 26.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "210": {
     "name": "PUSH C-2-1",
     "colId": 3,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 2.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "211": {
     "name": "PUSH C-2-2",
     "colId": 3,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 11.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "212": {
     "name": "PUSH C-2-3",
     "colId": 3,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 19.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "213": {
     "name": "PUSH C-2-4",
     "colId": 3,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 27.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "220": {
     "name": "PUSH C-3-1",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 3.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "221": {
     "name": "PUSH C-3-2",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 12.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "222": {
     "name": "PUSH C-3-3",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 20.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "223": {
     "name": "PUSH C-3-4",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 28.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "230": {
     "name": "PUSH C-4-1",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 4.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "231": {
     "name": "PUSH C-4-2",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 13.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "232": {
     "name": "PUSH C-4-3",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 21.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "233": {
     "name": "PUSH C-4-4",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 29.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "240": {
     "name": "PUSH C-5-1",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 5.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "241": {
     "name": "PUSH C-5-2",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 14.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "242": {
     "name": "PUSH C-5-3",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 22.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "243": {
     "name": "PUSH C-5-4",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 30.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "250": {
     "name": "PUSH C-6-1",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 7.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "251": {
     "name": "PUSH C-6-2",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 15.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "252": {
     "name": "PUSH C-6-3",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 23.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "253": {
     "name": "PUSH C-6-4",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 31.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "260": {
     "name": "PUSH C-7-1",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 8.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "261": {
     "name": "PUSH C-7-2",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 16.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "262": {
     "name": "PUSH C-7-3",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 24.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "263": {
     "name": "PUSH C-7-4",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 33.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "270": {
     "name": "PUSH C-8-1",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 9.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "271": {
     "name": "PUSH C-8-2",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 17.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "272": {
     "name": "PUSH C-8-3",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 25.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "273": {
     "name": "PUSH C-8-4",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 34.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "300": {
     "name": "PUSH D-1-1",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 52.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "301": {
     "name": "PUSH D-1-2",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 60.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "302": {
     "name": "PUSH D-1-3",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 68.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "303": {
     "name": "PUSH D-1-4",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 76.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "310": {
     "name": "PUSH D-2-1",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 53.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "311": {
     "name": "PUSH D-2-2",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 61.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "312": {
     "name": "PUSH D-2-3",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 69.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "313": {
     "name": "PUSH D-2-4",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 77.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "320": {
     "name": "PUSH D-3-1",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 54.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "321": {
     "name": "PUSH D-3-2",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 62.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "322": {
     "name": "PUSH D-3-3",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 70.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "323": {
     "name": "PUSH D-3-4",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 78.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "330": {
     "name": "PUSH D-4-1",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 55.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "331": {
     "name": "PUSH D-4-2",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 63.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "332": {
     "name": "PUSH D-4-3",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 71.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "333": {
     "name": "PUSH D-4-4",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 79.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "340": {
     "name": "PUSH D-5-1",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 56.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "341": {
     "name": "PUSH D-5-2",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 64.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "342": {
     "name": "PUSH D-5-3",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 72.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "343": {
     "name": "PUSH D-5-4",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 80.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "350": {
     "name": "PUSH D-6-1",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 57.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "351": {
     "name": "PUSH D-6-2",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 65.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "352": {
     "name": "PUSH D-6-3",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 73.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "353": {
     "name": "PUSH D-6-4",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 81.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "360": {
     "name": "PUSH D-7-1",
     "colId": 3,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 58.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "361": {
     "name": "PUSH D-7-2",
     "colId": 3,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 66.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "362": {
     "name": "PUSH D-7-3",
     "colId": 3,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 74.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "363": {
     "name": "PUSH D-7-4",
     "colId": 3,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 82.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "370": {
     "name": "PUSH D-8-1",
     "colId": 2,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 59.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "371": {
     "name": "PUSH D-8-2",
     "colId": 2,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 67.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "372": {
     "name": "PUSH D-8-3",
     "colId": 2,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 75.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "373": {
     "name": "PUSH D-8-4",
     "colId": 2,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 83.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "400": {
     "name": "PUSH E-1-1",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 1.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "401": {
     "name": "PUSH E-1-2",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 10.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "402": {
     "name": "PUSH E-1-3",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 18.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "403": {
     "name": "PUSH E-1-4",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 26.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "410": {
     "name": "PUSH E-2-1",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 2.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "411": {
     "name": "PUSH E-2-2",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 11.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "412": {
     "name": "PUSH E-2-3",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 19.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "413": {
     "name": "PUSH E-2-4",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 27.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "420": {
     "name": "PUSH E-3-1",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 3.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "421": {
     "name": "PUSH E-3-2",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 12.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "422": {
     "name": "PUSH E-3-3",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 20.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "423": {
     "name": "PUSH E-3-4",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 28.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "430": {
     "name": "PUSH E-4-1",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 4.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "431": {
     "name": "PUSH E-4-2",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 13.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "432": {
     "name": "PUSH E-4-3",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 21.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "433": {
     "name": "PUSH E-4-4",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 29.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "440": {
     "name": "PUSH E-5-1",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 5.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "441": {
     "name": "PUSH E-5-2",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 14.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "442": {
     "name": "PUSH E-5-3",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 22.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "443": {
     "name": "PUSH E-5-4",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 30.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "450": {
     "name": "PUSH E-6-1",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 7.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "451": {
     "name": "PUSH E-6-2",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 15.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "452": {
     "name": "PUSH E-6-3",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 23.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "453": {
     "name": "PUSH E-6-4",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 31.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "460": {
     "name": "PUSH E-7-1",
     "colId": 10,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 8.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "461": {
     "name": "PUSH E-7-2",
     "colId": 10,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 16.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "462": {
     "name": "PUSH E-7-3",
     "colId": 10,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 24.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "463": {
     "name": "PUSH E-7-4",
     "colId": 10,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 33.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "470": {
     "name": "PUSH E-8-1",
     "colId": 11,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 9.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "471": {
     "name": "PUSH E-8-2",
     "colId": 11,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 17.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "472": {
     "name": "PUSH E-8-3",
     "colId": 11,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 25.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "473": {
     "name": "PUSH E-8-4",
     "colId": 11,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 34.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "500": {
     "name": "PUSH F-1-1",
     "colId": 11,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 52.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "501": {
     "name": "PUSH F-1-2",
     "colId": 11,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 60.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "502": {
     "name": "PUSH F-1-3",
     "colId": 11,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 68.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "503": {
     "name": "PUSH F-1-4",
     "colId": 11,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 76.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "510": {
     "name": "PUSH F-2-1",
     "colId": 10,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 53.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "511": {
     "name": "PUSH F-2-2",
     "colId": 10,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 61.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "512": {
     "name": "PUSH F-2-3",
     "colId": 10,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 69.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "513": {
     "name": "PUSH F-2-4",
     "colId": 10,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 77.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "520": {
     "name": "PUSH F-3-1",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 54.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "521": {
     "name": "PUSH F-3-2",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 62.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "522": {
     "name": "PUSH F-3-3",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 70.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "523": {
     "name": "PUSH F-3-4",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 78.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "530": {
     "name": "PUSH F-4-1",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 55.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "531": {
     "name": "PUSH F-4-2",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 63.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "532": {
     "name": "PUSH F-4-3",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 71.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "533": {
     "name": "PUSH F-4-4",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 79.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "540": {
     "name": "PUSH F-5-1",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 56.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "541": {
     "name": "PUSH F-5-2",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 64.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "542": {
     "name": "PUSH F-5-3",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 72.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "543": {
     "name": "PUSH F-5-4",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 80.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "550": {
     "name": "PUSH F-6-1",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 57.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "551": {
     "name": "PUSH F-6-2",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 65.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "552": {
     "name": "PUSH F-6-3",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 73.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "553": {
     "name": "PUSH F-6-4",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 81.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "560": {
     "name": "PUSH F-7-1",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 58.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "561": {
     "name": "PUSH F-7-2",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 66.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "562": {
     "name": "PUSH F-7-3",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 74.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "563": {
     "name": "PUSH F-7-4",
     "colId": 5,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 82.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "570": {
     "name": "PUSH F-8-1",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 59.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "571": {
     "name": "PUSH F-8-2",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 67.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "572": {
     "name": "PUSH F-8-3",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 75.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "573": {
     "name": "PUSH F-8-4",
     "colId": 4,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 83.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "600": {
     "name": "PUSH G-1-1",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 1.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "601": {
     "name": "PUSH G-1-2",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 10.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "602": {
     "name": "PUSH G-1-3",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 18.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "603": {
     "name": "PUSH G-1-4",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 26.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "610": {
     "name": "PUSH G-2-1",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 2.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "611": {
     "name": "PUSH G-2-2",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 11.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "612": {
     "name": "PUSH G-2-3",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 19.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "613": {
     "name": "PUSH G-2-4",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 27.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "620": {
     "name": "PUSH G-3-1",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 3.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "621": {
     "name": "PUSH G-3-2",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 12.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "622": {
     "name": "PUSH G-3-3",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 20.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "623": {
     "name": "PUSH G-3-4",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 28.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "630": {
     "name": "PUSH G-4-1",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 4.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "631": {
     "name": "PUSH G-4-2",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 13.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "632": {
     "name": "PUSH G-4-3",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 21.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "633": {
     "name": "PUSH G-4-4",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 29.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "640": {
     "name": "PUSH G-5-1",
     "colId": 10,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 5.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "641": {
     "name": "PUSH G-5-2",
     "colId": 10,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 14.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "642": {
     "name": "PUSH G-5-3",
     "colId": 10,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 22.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "643": {
     "name": "PUSH G-5-4",
     "colId": 10,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 30.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "650": {
     "name": "PUSH G-6-1",
     "colId": 11,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 7.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "651": {
     "name": "PUSH G-6-2",
     "colId": 11,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 15.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "652": {
     "name": "PUSH G-6-3",
     "colId": 11,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 23.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "653": {
     "name": "PUSH G-6-4",
     "colId": 11,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 31.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "660": {
     "name": "PUSH G-7-1",
     "colId": 0,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 8.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "661": {
     "name": "PUSH G-7-2",
     "colId": 0,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 16.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "662": {
     "name": "PUSH G-7-3",
     "colId": 0,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 24.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "663": {
     "name": "PUSH G-7-4",
     "colId": 0,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 33.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "670": {
     "name": "PUSH G-8-1",
     "colId": 1,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 9.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "671": {
     "name": "PUSH G-8-2",
     "colId": 1,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 17.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "672": {
     "name": "PUSH G-8-3",
     "colId": 1,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 25.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "673": {
     "name": "PUSH G-8-4",
     "colId": 1,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 34.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "700": {
     "name": "PUSH H-1-1",
     "colId": 1,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 52.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "701": {
     "name": "PUSH H-1-2",
     "colId": 1,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 60.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "702": {
     "name": "PUSH H-1-3",
     "colId": 1,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 68.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "703": {
     "name": "PUSH H-1-4",
     "colId": 1,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 76.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "710": {
     "name": "PUSH H-2-1",
     "colId": 0,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 53.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "711": {
     "name": "PUSH H-2-2",
     "colId": 0,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 61.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "712": {
     "name": "PUSH H-2-3",
     "colId": 0,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 69.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "713": {
     "name": "PUSH H-2-4",
     "colId": 0,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 77.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "720": {
     "name": "PUSH H-3-1",
     "colId": 11,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 54.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "721": {
     "name": "PUSH H-3-2",
     "colId": 11,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 62.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "722": {
     "name": "PUSH H-3-3",
     "colId": 11,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 70.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "723": {
     "name": "PUSH H-3-4",
     "colId": 11,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 78.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "730": {
     "name": "PUSH H-4-1",
     "colId": 10,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 55.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "731": {
     "name": "PUSH H-4-2",
     "colId": 10,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 63.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "732": {
     "name": "PUSH H-4-3",
     "colId": 10,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 71.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "733": {
     "name": "PUSH H-4-4",
     "colId": 10,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 79.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "740": {
     "name": "PUSH H-5-1",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 56.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "741": {
     "name": "PUSH H-5-2",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 64.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "742": {
     "name": "PUSH H-5-3",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 72.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "743": {
     "name": "PUSH H-5-4",
     "colId": 9,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 80.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "750": {
     "name": "PUSH H-6-1",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 57.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "751": {
     "name": "PUSH H-6-2",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 65.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "752": {
     "name": "PUSH H-6-3",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 73.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "753": {
     "name": "PUSH H-6-4",
     "colId": 8,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 81.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "760": {
     "name": "PUSH H-7-1",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 58.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "761": {
     "name": "PUSH H-7-2",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 66.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "762": {
     "name": "PUSH H-7-3",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 74.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "763": {
     "name": "PUSH H-7-4",
     "colId": 7,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 82.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "770": {
     "name": "PUSH H-8-1",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 59.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "771": {
     "name": "PUSH H-8-2",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 67.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "772": {
     "name": "PUSH H-8-3",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 75.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    },
    "773": {
     "name": "PUSH H-8-4",
     "colId": 6,
     "dropOrder": 0,
-    "behavId": 5,
+    "behavId": 4,
     "feedbSlotVis": 1,
     "feedbId": 28,
-    "feedbSlot": 0
+    "feedbSlot": 0,
+    "0": {
+     "inUse": 1,
+     "target": 0,
+     "msgType": 2,
+     "ch": 2,
+     "csvRef": 0,
+     "msgNr": 83.0,
+     "maxOut": 16383,
+     "minOut": 0,
+     "curveId": 9
+    }
    }
   },
   "mute": {
